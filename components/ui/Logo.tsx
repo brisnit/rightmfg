@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/ui/LocaleLink";
 
 /**
  * Right Manufacturing wordmark (official artwork, trimmed copies of

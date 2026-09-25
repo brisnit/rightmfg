@@ -155,6 +155,7 @@ export const needs: { id: ProductionNeed; label: string; terms: string[]; detail
 ];
 
 export interface Flag {
+  id: string;
   terms: string[];
   level: "confirm" | "unlisted";
   message: string;
@@ -166,21 +167,21 @@ export interface Flag {
  * published at all. Either way the Finder routes to a human instead of guessing.
  */
 export const flags: Flag[] = [
-  { terms: ["titanium", "inconel", "specialty metal", "specialty metals", "exotic"], level: "confirm", message: "Right's materials page mentions titanium and specialty metals, but its core list is aluminum, stainless and carbon steel. Confirm with engineering." },
-  { terms: ["copper", "brass", "bronze"], level: "confirm", message: "Copper and brass appear in Right's materials imagery but not in its published material list. Confirm with engineering." },
-  { terms: ["laser cutting", "laser cut", "laser-cut", "fiber laser", "tube laser", "laser cutter"], level: "confirm", message: "Right's published equipment list covers shearing and CNC turret punching; laser cutting isn't listed. Confirm with engineering." },
-  { terms: ["robotic welding", "robot weld", "robotic weld", "stick welding", "stick weld", "smaw"], level: "confirm", message: "Right's published welding capabilities are MIG, TIG and spot welding. Confirm other processes with the team." },
-  { terms: ["anodize", "anodizing", "anodized", "polish", "polishing", "polished", "plating", "plated", "chrome", "zinc plating", "passivation", "passivate", "e-coat", "galvanize", "galvanizing"], level: "confirm", message: "Published finishing through APC is powder coating, Cerakote, blasting, masking, wash and laser marking. Confirm other finishes with the team." },
-  { terms: ["tolerance", "tolerances", "±", "+/-", "thou", "microns", "micron", "tight tolerance", "tight tolerances"], level: "confirm", message: "Right doesn't publish general tolerances. They depend on geometry, material and process and are confirmed on drawing review." },
-  { terms: ["iso", "iso 9001", "as9100", "iso 13485", "13485", "itar", "nadcap", "certified", "certification", "certifications", "aws certified", "ppap"], level: "confirm", message: "Certifications and registrations aren't published on rightmfg.com. Ask the team for current quality documentation." },
-  { terms: ["casting", "castings", "cast", "die cast", "forging", "forged"], level: "unlisted", message: "Casting and forging aren't among Right's published capabilities." },
-  { terms: ["injection molding", "injection molded", "plastic", "plastics", "molded", "urethane", "rubber", "silicone"], level: "unlisted", message: "Right is a metal fabricator. Plastic and molded parts aren't among its published capabilities." },
-  { terms: ["3d printing", "3d printed", "additive", "additive manufacturing"], level: "unlisted", message: "Additive manufacturing isn't among Right's published capabilities." },
-  { terms: ["5 axis", "5-axis", "five axis", "lathe", "turning", "turned", "swiss", "cnc turning"], level: "unlisted", message: "Right's published machining is CNC vertical milling (3 HAAS mills). Turning and 5-axis aren't listed." },
-  { terms: ["waterjet", "water jet", "plasma", "plasma cutting", "edm", "wire edm"], level: "unlisted", message: "Waterjet, plasma and EDM aren't among Right's published cutting processes." },
-  { terms: ["roll forming", "roll formed", "deep draw", "deep drawn", "hydroform", "hydroforming", "spinning", "metal spinning"], level: "unlisted", message: "This forming process isn't among Right's published capabilities. Right forms with press brakes, punch presses and mandrel/3D bending." },
-  { terms: ["pcb", "circuit board", "wiring harness", "electronics assembly", "cable assembly", "firmware"], level: "unlisted", message: "Electronics and wiring aren't among Right's published capabilities. Right can deliver the metal structure and mechanical assembly." },
-  { terms: ["wood", "wooden", "carbon fiber", "carbon fibre", "fiberglass", "glass"], level: "unlisted", message: "Right fabricates metal. Non-metal materials aren't among its published capabilities." },
+  { id: "specialty-metals", terms: ["titanium", "inconel", "specialty metal", "specialty metals", "exotic"], level: "confirm", message: "Right's materials page mentions titanium and specialty metals, but its core list is aluminum, stainless and carbon steel. Confirm with engineering." },
+  { id: "copper-brass", terms: ["copper", "brass", "bronze"], level: "confirm", message: "Copper and brass appear in Right's materials imagery but not in its published material list. Confirm with engineering." },
+  { id: "laser-cutting", terms: ["laser cutting", "laser cut", "laser-cut", "fiber laser", "tube laser", "laser cutter"], level: "confirm", message: "Right's published equipment list covers shearing and CNC turret punching; laser cutting isn't listed. Confirm with engineering." },
+  { id: "other-welding", terms: ["robotic welding", "robot weld", "robotic weld", "stick welding", "stick weld", "smaw"], level: "confirm", message: "Right's published welding capabilities are MIG, TIG and spot welding. Confirm other processes with the team." },
+  { id: "other-finishes", terms: ["anodize", "anodizing", "anodized", "polish", "polishing", "polished", "plating", "plated", "chrome", "zinc plating", "passivation", "passivate", "e-coat", "galvanize", "galvanizing"], level: "confirm", message: "Published finishing through APC is powder coating, Cerakote, blasting, masking, wash and laser marking. Confirm other finishes with the team." },
+  { id: "tolerances", terms: ["tolerance", "tolerances", "±", "+/-", "thou", "microns", "micron", "tight tolerance", "tight tolerances"], level: "confirm", message: "Right doesn't publish general tolerances. They depend on geometry, material and process and are confirmed on drawing review." },
+  { id: "certifications", terms: ["iso", "iso 9001", "as9100", "iso 13485", "13485", "itar", "nadcap", "certified", "certification", "certifications", "aws certified", "ppap"], level: "confirm", message: "Certifications and registrations aren't published on rightmfg.com. Ask the team for current quality documentation." },
+  { id: "casting-forging", terms: ["casting", "castings", "cast", "die cast", "forging", "forged"], level: "unlisted", message: "Casting and forging aren't among Right's published capabilities." },
+  { id: "plastics", terms: ["injection molding", "injection molded", "plastic", "plastics", "molded", "urethane", "rubber", "silicone"], level: "unlisted", message: "Right is a metal fabricator. Plastic and molded parts aren't among its published capabilities." },
+  { id: "additive", terms: ["3d printing", "3d printed", "additive", "additive manufacturing"], level: "unlisted", message: "Additive manufacturing isn't among Right's published capabilities." },
+  { id: "turning-5axis", terms: ["5 axis", "5-axis", "five axis", "lathe", "turning", "turned", "swiss", "cnc turning"], level: "unlisted", message: "Right's published machining is CNC vertical milling (3 HAAS mills). Turning and 5-axis aren't listed." },
+  { id: "other-cutting", terms: ["waterjet", "water jet", "plasma", "plasma cutting", "edm", "wire edm"], level: "unlisted", message: "Waterjet, plasma and EDM aren't among Right's published cutting processes." },
+  { id: "other-forming", terms: ["roll forming", "roll formed", "deep draw", "deep drawn", "hydroform", "hydroforming", "spinning", "metal spinning"], level: "unlisted", message: "This forming process isn't among Right's published capabilities. Right forms with press brakes, punch presses and mandrel/3D bending." },
+  { id: "electronics", terms: ["pcb", "circuit board", "wiring harness", "electronics assembly", "cable assembly", "firmware"], level: "unlisted", message: "Electronics and wiring aren't among Right's published capabilities. Right can deliver the metal structure and mechanical assembly." },
+  { id: "non-metals", terms: ["wood", "wooden", "carbon fiber", "carbon fibre", "fiberglass", "glass"], level: "unlisted", message: "Right fabricates metal. Non-metal materials aren't among its published capabilities." },
 ];
 
 /** Suggested prompts for the Finder UI. */

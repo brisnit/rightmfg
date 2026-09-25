@@ -1,7 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/ui/LocaleLink";
 import type { ReactNode } from "react";
 import type { ImageRef } from "@/data/types";
+import { getI18n } from "@/lib/i18n/server";
 
 export type TitleSize = "xl" | "lg" | "md";
 
@@ -23,7 +24,7 @@ export interface Crumb {
 }
 
 /** Inner-page hero: full-bleed photo (or video), breadcrumb, huge title, optional spec strip. */
-export function PageHero({
+export async function PageHero({
   crumbs,
   eyebrow,
   title,
@@ -48,6 +49,7 @@ export function PageHero({
   compact?: boolean;
   size?: TitleSize;
 }) {
+  const breadcrumbLabel = (await getI18n()).dict.a11y.breadcrumb;
   return (
     <section className={`relative isolate flex flex-col overflow-hidden bg-ink text-white ${compact ? "min-h-[26rem]" : "min-h-[40rem] lg:min-h-[48rem]"}`}>
       {video ? (
@@ -67,12 +69,12 @@ export function PageHero({
           style={{ objectPosition: image.position ?? "50% 50%" }}
         />
       )}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/80 to-ink/25" aria-hidden />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r rtl:bg-gradient-to-l from-ink via-ink/80 to-ink/25" aria-hidden />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-transparent to-ink/60" aria-hidden />
-      <div className="blueprint absolute inset-0 -z-10 opacity-50 [mask-image:linear-gradient(to_right,black,transparent_65%)]" aria-hidden />
+      <div className="blueprint absolute inset-0 -z-10 opacity-50 [mask-image:linear-gradient(to_right,black,transparent_65%)] rtl:[mask-image:linear-gradient(to_left,black,transparent_65%)]" aria-hidden />
 
       <div className={`container-x flex flex-1 flex-col justify-end pt-32 ${specs ? "pb-12" : "pb-16 lg:pb-20"} lg:pt-40`}>
-        <nav aria-label="Breadcrumb" className="rise">
+        <nav aria-label={breadcrumbLabel} className="rise">
           <ol className="label flex flex-wrap items-center gap-2 text-[0.68rem] text-white/60">
             {crumbs.map((c, i) => (
               <li key={c.label} className="flex items-center gap-2">
@@ -115,7 +117,7 @@ export function PageHero({
         <div className="border-t border-white/10 bg-ink/70">
           <dl className="container-x grid grid-cols-2 lg:grid-cols-4">
             {specs.map((s, i) => (
-              <div key={s.label} className={`border-white/10 py-5 ${i % 2 ? "border-l pl-4 sm:pl-6" : "pr-4"} ${i > 1 ? "border-t lg:border-t-0" : ""} ${i === 2 ? "lg:border-l lg:pl-6" : ""}`}>
+              <div key={s.label} className={`border-white/10 py-5 ${i % 2 ? "border-s ps-4 sm:ps-6" : "pe-4"} ${i > 1 ? "border-t lg:border-t-0" : ""} ${i === 2 ? "lg:border-s lg:ps-6" : ""}`}>
                 <dt className="label text-[0.66rem] text-white/55">{s.label}</dt>
                 <dd className="heading mt-1.5 text-lg text-white sm:text-xl">{s.value}</dd>
               </div>

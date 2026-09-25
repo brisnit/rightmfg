@@ -1,14 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/ui/LocaleLink";
 import { useState } from "react";
-import { markets } from "@/data/markets";
-import { capabilityById } from "@/data/capabilities";
+import { useI18n } from "@/components/i18n/I18nProvider";
+import { t } from "@/lib/i18n/format";
 import { ArrowRight, ArrowUpRight } from "@/components/ui/Icons";
 
 /** Desktop: index list + live preview. Mobile: stacked modules. */
 export function MarketsExplorer() {
+  const { dict, content } = useI18n();
+  const markets = content.markets;
+  const capabilityById = Object.fromEntries(content.capabilities.map((c) => [c.id, c]));
   const [active, setActive] = useState(0);
   const m = markets[active];
 
@@ -61,7 +64,7 @@ export function MarketsExplorer() {
               ))}
             </ul>
             <Link href={`/markets/${m.id}`} className="label rise mt-8 inline-flex items-center gap-2 self-start border-b border-white/40 pb-1 text-white hover:border-white" style={{ ["--d" as string]: "240ms" }}>
-              {m.short} manufacturing <ArrowRight size={14} />
+              {t(dict.marketsSection.manufacturing, { name: m.short })} <ArrowRight size={14} />
             </Link>
           </div>
         </div>
@@ -75,9 +78,9 @@ export function MarketsExplorer() {
               <div className="relative aspect-[16/9] overflow-hidden">
                 <Image src={mk.image.src} alt={mk.image.alt} fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover photo-grade opacity-80" />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink to-transparent" />
-                <span className="label tabular absolute left-4 top-4 text-white/80">{String(i + 1).padStart(2, "0")}</span>
-                <span className="display absolute bottom-4 left-4 text-[1.8rem] text-white">{mk.short}</span>
-                <ArrowUpRight size={20} className="absolute bottom-5 right-4 text-white/70" />
+                <span className="label tabular absolute start-4 top-4 text-white/80">{String(i + 1).padStart(2, "0")}</span>
+                <span className="display absolute bottom-4 start-4 text-[1.8rem] text-white">{mk.short}</span>
+                <ArrowUpRight size={20} className="absolute bottom-5 end-4 text-white/70" />
               </div>
               <div className="p-4 pb-6">
                 <p className="leading-relaxed text-white/80">{mk.summary}</p>

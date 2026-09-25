@@ -2,9 +2,9 @@ import type { MetadataRoute } from "next";
 import { services } from "@/data/services";
 import { markets } from "@/data/markets";
 import { materials } from "@/data/materials";
+import { SITE_URL, alternatesFor, locales, localizeHref } from "@/lib/i18n/config";
 
-const SITE = "https://www.rightmfg.com";
-
+/** Every page in every language, with hreflang alternates. */
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     "/",
@@ -18,5 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/resources",
     "/start-a-project",
   ];
-  return paths.map((p) => ({ url: `${SITE}${p}`, changeFrequency: "monthly", priority: p === "/" ? 1 : 0.7 }));
+  return locales.flatMap((l) =>
+    paths.map((p) => ({
+      url: SITE_URL + localizeHref(l, p),
+      changeFrequency: "monthly" as const,
+      priority: p === "/" ? 1 : 0.7,
+      alternates: { languages: Object.fromEntries(Object.entries(alternatesFor(l, p).languages).map(([k, v]) => [k, SITE_URL + v])) },
+    })),
+  );
 }

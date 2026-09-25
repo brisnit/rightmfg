@@ -1,0 +1,457 @@
+{
+  "capabilityTerms": {
+    "mandrel-tube-bending": [],
+    "3d-bending": [],
+    "tube-cutoff": [],
+    "tube-punching": [],
+    "tube-drill-milling": [],
+    "cnc-turret-punching": [],
+    "cnc-press-brake": [],
+    "punch-press": [],
+    "shearing": [],
+    "tig-welding": [],
+    "mig-welding": [],
+    "spot-welding": [],
+    "cnc-machining": [],
+    "hardware-installation": [],
+    "assembly": [],
+    "packaging-logistics": [],
+    "powder-coating": [],
+    "surface-prep": [],
+    "part-marking": [],
+    "engineering-support": [],
+    "prototyping": [],
+    "production-manufacturing": []
+  },
+  "materialTerms": {
+    "aluminum": [],
+    "stainless-steel": [],
+    "carbon-steel": []
+  },
+  "marketTerms": {
+    "medical": [],
+    "automotive": [],
+    "military": [],
+    "industrial": [],
+    "architectural": [],
+    "decorative": []
+  },
+  "partTypes": {
+    "frame": {
+      "label": "Frame / structure",
+      "reason": "Frames are usually bent tube joined by welds. Bending removes joints, and welding closes the structure.",
+      "terms": []
+    },
+    "cart": {
+      "label": "Cart",
+      "reason": "Carts are among the medical solutions Right lists: a bent tube frame, formed sheet shelves and installed hardware.",
+      "terms": []
+    },
+    "handle-rail": {
+      "label": "Handle / rail",
+      "reason": "Handles and rails are classic mandrel-bent tube. A die library matched to the tube size keeps bends clean and repeatable.",
+      "terms": []
+    },
+    "bracket": {
+      "label": "Bracket / tab / mount",
+      "reason": "Brackets and tabs are typically punched flat, then formed on a CNC press brake.",
+      "terms": []
+    },
+    "enclosure": {
+      "label": "Enclosure / housing",
+      "reason": "Enclosures are punched flat patterns formed on press brakes, often spot welded, with hardware installed and a coated finish.",
+      "terms": []
+    },
+    "panel": {
+      "label": "Panel",
+      "reason": "Panels, doors and shelves are sheared, punched and formed from flat sheet.",
+      "terms": []
+    },
+    "display": {
+      "label": "Monitor / display component",
+      "reason": "Monitor display components are among the medical solutions Right lists: formed sheet and tube with hardware and finish.",
+      "terms": []
+    },
+    "rack": {
+      "label": "Rack / cage",
+      "reason": "Racks and cages are bent tube structures, usually welded and powder coated for outdoor use.",
+      "terms": []
+    },
+    "channel": {
+      "label": "Formed channel",
+      "reason": "Right lists 3D bending of channels alongside tube.",
+      "terms": []
+    },
+    "extrusion": {
+      "label": "Extrusion",
+      "reason": "Right processes custom extruded shapes: cut to length, machined on HAAS mills and bent where needed.",
+      "terms": []
+    },
+    "assembly-unit": {
+      "label": "Multi-part assembly",
+      "reason": "Multi-part products need hardware, assembly and packaging as well as the fabricated parts.",
+      "terms": []
+    }
+  },
+  "needs": {
+    "prototype": {
+      "label": "Prototype",
+      "detail": "Prototypes validate design before production, and get the same attention to precision as large orders.",
+      "terms": []
+    },
+    "rush": {
+      "label": "Rush",
+      "detail": "48-hour turnaround on select prototypes and rush orders.",
+      "terms": []
+    },
+    "low-volume": {
+      "label": "Low volume / high mix",
+      "detail": "High-mix, lower-volume programs are core to Right's industrial work.",
+      "terms": []
+    },
+    "production": {
+      "label": "Production",
+      "detail": "Scalable production: 10,000+ precision parts manufactured annually.",
+      "terms": []
+    }
+  },
+  "rules": {
+    "tube-bend": "Bent tube → mandrel bending on 2 pull-type benders with 100+ dies.",
+    "tube-compound": "Multi-plane bends → 3D bending with plane-of-bend control.",
+    "tube-holes": "Holes and slots in tube → tube punching.",
+    "sheet-holes": "Features in flat sheet → CNC turret punching.",
+    "sheet-default": "Sheet parts are usually punched flat and formed on a press brake.",
+    "tube-default": "Tube work starts with cut-off, then bending.",
+    "weld-stainless": "Welded stainless → TIG, which gives fine control for clean, visible welds.",
+    "weld-aluminum": "Welded aluminum → TIG for control, MIG where speed matters.",
+    "weld-carbon": "Welded carbon steel → MIG for strong, efficient structural welds.",
+    "weld-generic": "Welded assembly → MIG or TIG depending on material and appearance.",
+    "sheet-lap-weld": "Sheet-to-sheet joints can be spot welded without filler.",
+    "welded-tabs": "Tabs and brackets on a tube frame → formed on the press brake, then welded on.",
+    "mounting": "Mounting points usually need installed hardware, fitted and alignment-checked before delivery.",
+    "medical-finish": "Medical equipment calls for environmentally clean exterior coating.",
+    "outdoor": "Outdoor or corrosive environments → durable powder coat or Cerakote through APC.",
+    "proto": "Prototype → built with production-level precision. 48-hour turnaround on select prototypes and rush orders.",
+    "production": "Production → repeatable runs, 10,000+ precision parts a year.",
+    "proto-to-prod": "Prototype to production under one supplier.",
+    "unsure": "Not sure of the process → engineers with 30+ years' experience help with design.",
+    "tapped": "Machined features → HAAS CNC vertical mills."
+  },
+  "flags": {
+    "specialty-metals": {
+      "message": "Right's materials page mentions titanium and specialty metals, but its core list is aluminum, stainless and carbon steel. Confirm with engineering.",
+      "terms": []
+    },
+    "copper-brass": {
+      "message": "Copper and brass appear in Right's materials imagery but not in its published material list. Confirm with engineering.",
+      "terms": []
+    },
+    "laser-cutting": {
+      "message": "Right's published equipment list covers shearing and CNC turret punching; laser cutting isn't listed. Confirm with engineering.",
+      "terms": []
+    },
+    "other-welding": {
+      "message": "Right's published welding capabilities are MIG, TIG and spot welding. Confirm other processes with the team.",
+      "terms": []
+    },
+    "other-finishes": {
+      "message": "Published finishing through APC is powder coating, Cerakote, blasting, masking, wash and laser marking. Confirm other finishes with the team.",
+      "terms": []
+    },
+    "tolerances": {
+      "message": "Right doesn't publish general tolerances. They depend on geometry, material and process and are confirmed on drawing review.",
+      "terms": []
+    },
+    "certifications": {
+      "message": "Certifications and registrations aren't published on rightmfg.com. Ask the team for current quality documentation.",
+      "terms": []
+    },
+    "casting-forging": {
+      "message": "Casting and forging aren't among Right's published capabilities.",
+      "terms": []
+    },
+    "plastics": {
+      "message": "Right is a metal fabricator. Plastic and molded parts aren't among its published capabilities.",
+      "terms": []
+    },
+    "additive": {
+      "message": "Additive manufacturing isn't among Right's published capabilities.",
+      "terms": []
+    },
+    "turning-5axis": {
+      "message": "Right's published machining is CNC vertical milling (3 HAAS mills). Turning and 5-axis aren't listed.",
+      "terms": []
+    },
+    "other-cutting": {
+      "message": "Waterjet, plasma and EDM aren't among Right's published cutting processes.",
+      "terms": []
+    },
+    "other-forming": {
+      "message": "This forming process isn't among Right's published capabilities. Right forms with press brakes, punch presses and mandrel/3D bending.",
+      "terms": []
+    },
+    "electronics": {
+      "message": "Electronics and wiring aren't among Right's published capabilities. Right can deliver the metal structure and mechanical assembly.",
+      "terms": []
+    },
+    "non-metals": {
+      "message": "Right fabricates metal. Non-metal materials aren't among its published capabilities.",
+      "terms": []
+    }
+  },
+  "termAliases": {},
+  "featureLabels": {
+    "multipleBends": "Multiple bends",
+    "compoundBends": "Compound bends",
+    "complexGeometry": "Complex geometry",
+    "geometry3d": "3D geometry",
+    "bends": "Bends",
+    "welded": "Welded",
+    "holes": "Holes / features",
+    "holePattern": "Hole pattern",
+    "slots": "Slots",
+    "outdoor": "Outdoor use",
+    "corrosion": "Corrosion resistance",
+    "tapped": "Tapped features",
+    "threaded": "Threaded features",
+    "machined": "Machined features"
+  },
+  "tubeFormTerms": [],
+  "sheetFormTerms": [],
+  "stopPhrases": [],
+  "referential": [],
+  "questionWords": [],
+  "intents": {
+    "servicesNeeded": {
+      "match": [],
+      "title": "Recommended manufacturing route",
+      "body": "Based on what you've described, this is the route Right would typically use: each process in sequence, with the reason it applies. An engineer confirms the final route when they review your drawing.",
+      "titleEmpty": "Describe the part and I'll map the route",
+      "bodyEmpty": "Tell me what you're making, the material, and roughly how many. For example: 'aluminum tube frame with welded tabs, 200 units'. I'll map it to Right's forming, welding, secondary and finishing processes.",
+      "links": [],
+      "bullets": []
+    },
+    "prototypes": {
+      "match": [],
+      "title": "Yes. Prototype through production.",
+      "body": "Right develops prototypes to validate designs and test function before production, with the same attention to precision as large orders. That lets you fine-tune the spec and reduce risk before committing to volume.",
+      "bullets": [
+        "48-hour turnaround on select prototypes and rush orders",
+        "Engineers with 30+ years of experience help refine the design",
+        "The same equipment and team carry the part into production"
+      ],
+      "links": [
+        "Start a prototype"
+      ]
+    },
+    "squareTube": {
+      "match": [],
+      "title": "Yes. Round and square tube.",
+      "body": "Right's two pull-type mandrel benders run a library of more than 100 bending dies covering a wide variety of round and square tubes. Plane-of-bend control and pressure die assist help hold geometry through the bend.",
+      "bullets": [],
+      "links": [
+        "Tube bending capability"
+      ]
+    },
+    "materials": {
+      "match": [],
+      "title": "Aluminum, stainless and carbon steel",
+      "body": "Right fabricates in {materials}, in sheet and tube, and keeps a consistent material inventory for fast turnaround. Material is chosen for strength, formability and the application.",
+      "bullets": [],
+      "links": []
+    },
+    "materialChoice": {
+      "match": [],
+      "title": "Match the metal to the job",
+      "body": "Steel is usually stronger, but aluminum is lighter and resists corrosion well. Right recommends aluminum where weight matters and steel for heavy-duty strength. Stainless is the choice when strength and corrosion resistance both matter. The team looks at strength, corrosion resistance, weight and weldability for your application.",
+      "bullets": [],
+      "links": [
+        "Compare materials"
+      ]
+    },
+    "welding": {
+      "match": [],
+      "title": "Yes. MIG, TIG and spot welding.",
+      "body": "Right welds steel, stainless steel and aluminum alloys. Experienced technicians use calibrated equipment and process controls, and welds are inspected for strength and finish.",
+      "bullets": [
+        "MIG: quick, strong welds for structural work",
+        "TIG: detailed control for visible or thin work",
+        "Spot: sheet-to-sheet joints without filler"
+      ],
+      "links": [
+        "Welding capability"
+      ]
+    },
+    "bending": {
+      "match": [],
+      "title": "Yes. Tube, channel and sheet.",
+      "body": "Tube and channel are bent on two pull-type mandrel benders with 100+ dies, including 3D multi-plane bends with plane-of-bend control. Sheet is formed on four Cincinnati CNC press brakes (60, 90 and 135 ton).",
+      "bullets": [],
+      "links": [
+        "Tube bending",
+        "Sheet metal"
+      ]
+    },
+    "finishing": {
+      "match": [],
+      "title": "Yes, through sister company APC.",
+      "body": "Finishing is handled by {apc}, Right's partner for {years} years, also located in the heart of San Diego's industrial complex. An automatic conveyor line handles high-volume parts, and batch application covers larger units and smaller volumes.",
+      "bullets": [],
+      "links": [
+        "Finishing with APC"
+      ]
+    },
+    "machining": {
+      "match": [],
+      "title": "Yes. CNC vertical milling.",
+      "body": "Right runs three HAAS CNC vertical mills for machined features on formed and fabricated parts: drilled, tapped and milled features on sheet, tube and extrusions.",
+      "bullets": [],
+      "links": [
+        "Hardware, assembly & machining"
+      ]
+    },
+    "assembly": {
+      "match": [],
+      "title": "Yes. Delivered complete.",
+      "body": "Right handles hardware installation, component integration, fastener fitting, mid- and high-level assembly, packaging and logistics. Hardware compatibility and alignment are double-checked before delivery.",
+      "bullets": [],
+      "links": [
+        "Hardware & assembly"
+      ]
+    },
+    "equipment": {
+      "match": [],
+      "title": "Equipment on Right's floor",
+      "body": "The published equipment list, from Right's capability pages and brochure:",
+      "bullets": [],
+      "links": [
+        "Sheet metal",
+        "Tube bending"
+      ]
+    },
+    "leadTime": {
+      "match": [],
+      "title": "48 hours on select prototypes and rush orders",
+      "body": "Lead times depend on complexity, material availability, finish and quantity. Simple tube jobs can be same-day or next-day in some cases. Right keeps a consistent material inventory and confirms a timeline once specs are reviewed.",
+      "bullets": [],
+      "links": [
+        "Get a timeline"
+      ]
+    },
+    "volume": {
+      "match": [],
+      "title": "From one prototype to production volume",
+      "body": "Right supports high-mix, lower-volume programs through higher-volume production and manufactures more than 10,000 precision parts a year. Prototypes and production runs use the same team and equipment.",
+      "bullets": [],
+      "links": []
+    },
+    "tolerance": {
+      "match": [],
+      "title": "Confirmed on drawing review",
+      "body": "Right doesn't publish general tolerances, because achievable tolerance depends on geometry, material and process. Send your drawing and the engineering team will confirm what they can hold on your features.",
+      "bullets": [],
+      "links": [
+        "Upload a drawing"
+      ]
+    },
+    "certifications": {
+      "match": [],
+      "title": "Ask the team for quality documentation",
+      "body": "Certifications and registrations aren't published on rightmfg.com, so this tool won't guess. Right's team can tell you exactly what quality documentation your program needs.",
+      "bullets": [],
+      "links": [
+        "Contact the team"
+      ]
+    },
+    "industries": {
+      "match": [],
+      "title": "Industries Right serves",
+      "body": "Right focuses on OEM customers across these markets from its 20,000 sq. ft. San Diego facility:",
+      "bullets": [],
+      "links": [
+        "All markets"
+      ]
+    },
+    "location": {
+      "match": [],
+      "title": "San Diego, California",
+      "body": "A 20,000 sq. ft. facility at {address}, in the heart of San Diego's industrial complex. Finishing partner APC is also based there.",
+      "bullets": [],
+      "links": [
+        "About Right"
+      ]
+    },
+    "about": {
+      "match": [],
+      "title": "25+ years. 35 people. 20+ years average experience.",
+      "body": "Right was founded in the 1990s in San Diego's industrial core with a service-first mission. Today it's a 35-person company whose team averages more than 20 years of experience, led by General Manager Greg Lyon, Customer Service Manager Karra Lyon and Production Manager LH Byrd. 98% of clients stay.",
+      "bullets": [],
+      "links": [
+        "About Right"
+      ]
+    },
+    "quote": {
+      "match": [],
+      "title": "Start with a drawing",
+      "body": "Share technical drawings or a description and your requirements. Right's team reviews your specifications and returns a detailed quote and timeline.",
+      "bullets": [],
+      "links": [
+        "Start a project",
+        "Call {phone}"
+      ]
+    },
+    "contact": {
+      "match": [],
+      "title": "Talk to manufacturing",
+      "body": "Call {phone} or email {email}. Or start a project online and attach your drawings.",
+      "bullets": [],
+      "links": [
+        "Start a project",
+        "Email {email}"
+      ]
+    },
+    "apc": {
+      "match": [],
+      "title": "{apc}: a 35-year partner",
+      "body": "{summary}",
+      "bullets": [],
+      "links": [
+        "Finishing with APC"
+      ]
+    },
+    "greeting": {
+      "match": [],
+      "title": "Describe what you need to manufacture",
+      "body": "Tell me about the part: what it is, the material, the features (bends, welds, holes, hardware, finish) and roughly how many. I'll match it to Right's verified capabilities and explain why each one applies.",
+      "bullets": [],
+      "links": []
+    }
+  },
+  "ui": {
+    "leadYes": "Yes, this fits Right's published capabilities.",
+    "leadLikely": "Likely, with items to confirm.",
+    "leadPartly": "Partly.",
+    "route": "{lead} {subject}{market} would typically run through {steps}.",
+    "forMarket": " for {market} use",
+    "partNoun": "part",
+    "tubePart": "tube part",
+    "sheetPart": "sheet metal part",
+    "and": "and",
+    "listSeparator": ", ",
+    "clarify": "I couldn't match that to a specific process yet. Describe the part, the material, and features like bends, welds, holes, hardware or finish.",
+    "youAskedFor": "You asked for {name}.",
+    "performedOn": "Performed on {materials}.",
+    "relevantTo": "Relevant to {market} work: {summary}",
+    "formTube": "Tube",
+    "formSheet": "Sheet",
+    "followUps": {
+      "materials": "What materials do you work with?",
+      "prototypes": "Can you handle prototypes?",
+      "squareTube": "Can you bend square tubing?",
+      "powderCoat": "Can you powder coat it?",
+      "assemble": "Can you assemble and package it?",
+      "services": "What services would I need for this part?",
+      "quote": "How do I get a quote?"
+    }
+  }
+}

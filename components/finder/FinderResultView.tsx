@@ -1,30 +1,23 @@
-import Link from "next/link";
+import Link from "@/components/ui/LocaleLink";
 import type { CSSProperties } from "react";
 import type { FinderResult, DetectedEntity } from "@/lib/finder/types";
-import { company } from "@/data/company";
+import { useI18n } from "@/components/i18n/I18nProvider";
 import { Alert, ArrowRight, ArrowUpRight, Phone } from "@/components/ui/Icons";
-
-const KIND_LABEL: Record<DetectedEntity["kind"], string> = {
-  part: "Part",
-  material: "Material",
-  market: "Market",
-  need: "Stage",
-  process: "Process",
-  feature: "Feature",
-  form: "Form",
-};
 
 function d(i: number): CSSProperties {
   return { "--d": `${i * 90}ms` } as CSSProperties;
 }
 
 export function Described({ result }: { result: FinderResult }) {
+  const { dict } = useI18n();
+  const f = dict.finder;
+  const KIND_LABEL: Record<DetectedEntity["kind"], string> = f.kinds;
   return (
     <div className="rise" style={d(0)}>
-      <p className="label text-blue-bright">You described</p>
+      <p className="label text-blue-bright">{f.youDescribed}</p>
       <p className="heading mt-3 max-w-3xl text-xl text-white sm:text-2xl">&ldquo;{result.query}&rdquo;</p>
       {result.described.length > 0 && (
-        <ul className="mt-4 flex flex-wrap gap-2" aria-label="Detected requirements">
+        <ul className="mt-4 flex flex-wrap gap-2" aria-label={f.detected}>
           {result.described.map((e) => (
             <li
               key={e.key}
@@ -32,7 +25,7 @@ export function Described({ result }: { result: FinderResult }) {
             >
               <span className="label text-[0.66rem] text-gray">{KIND_LABEL[e.kind]}</span>
               <span>{e.label}</span>
-              {e.fromContext && <span className="label text-[0.62rem] text-white/45">earlier</span>}
+              {e.fromContext && <span className="label text-[0.62rem] text-white/45">{f.earlier}</span>}
             </li>
           ))}
         </ul>
@@ -42,6 +35,9 @@ export function Described({ result }: { result: FinderResult }) {
 }
 
 export function FinderResultView({ result }: { result: FinderResult }) {
+  const { dict, content } = useI18n();
+  const f = dict.finder;
+  const company = content.company;
   const hasMatches = result.groups.length > 0;
   const capIds = result.groups.flatMap((g) => g.items.map((i) => i.id));
   const rfqHref = `/start-a-project?q=${encodeURIComponent(result.context.thread ?? result.query)}${capIds.length ? `&caps=${capIds.join(",")}` : ""}${result.materials.length ? `&mat=${result.materials.map((m) => m.id).join(",")}` : ""}`;
@@ -51,7 +47,7 @@ export function FinderResultView({ result }: { result: FinderResult }) {
   return (
     <div className="mt-8 space-y-6">
       {result.answer && (
-        <section className="rise border-l-2 border-blue-bright bg-white/[0.04] p-5 sm:p-7" style={d(step++)} aria-label="Answer">
+        <section className="rise border-s-2 border-blue-bright bg-white/[0.04] p-5 sm:p-7" style={d(step++)} aria-label={f.answer}>
           <h3 className="heading text-xl text-white sm:text-2xl">{result.answer.title}</h3>
           <p className="mt-3 max-w-3xl leading-relaxed text-white/80">{result.answer.body}</p>
           {result.answer.bullets && (
@@ -79,23 +75,23 @@ export function FinderResultView({ result }: { result: FinderResult }) {
       {hasMatches && (
         <div className="grid gap-px bg-white/10 lg:grid-cols-12">
           {/* Summary column */}
-          <section className="rise bg-ink p-5 sm:p-7 lg:col-span-5" style={d(step++)} aria-label="Match summary">
+          <section className="rise bg-ink p-5 sm:p-7 lg:col-span-5" style={d(step++)} aria-label={f.matchSummary}>
             <div className="lg:sticky lg:top-28">
             {result.coverage && (
               <div className="flex items-end justify-between gap-4 border-b border-white/10 pb-6">
                 <div>
-                  <p className="label text-gray">Requirement coverage</p>
+                  <p className="label text-gray">{f.coverage}</p>
                   <p className="display mt-2 text-[4.5rem] leading-none text-white sm:text-[5.5rem]">
                     {result.coverage.percent}
                     <span className="text-blue-bright">%</span>
                   </p>
                 </div>
-                <p className="label pb-2 text-right text-gray">
+                <p className="label pb-2 text-end text-gray">
                   {result.coverage.matched}/{result.coverage.total}
                   <br />
-                  requirements
+                  {f.requirements}
                   <br />
-                  matched
+                  {f.matchedWord}
                 </p>
               </div>
             )}
@@ -103,7 +99,7 @@ export function FinderResultView({ result }: { result: FinderResult }) {
 
             {result.sequence.length > 0 && (
               <div className="mt-7">
-                <p className="label text-gray">Recommended process</p>
+                <p className="label text-gray">{f.recommended}</p>
                 <ol className="mt-3 border-t border-white/10">
                   {result.sequence.map((s, i) => (
                     <li key={s.id} className="rise border-b border-white/10" style={d(step + i)}>
@@ -121,7 +117,7 @@ export function FinderResultView({ result }: { result: FinderResult }) {
             <dl className="mt-7 grid grid-cols-2 gap-x-6 gap-y-5">
               {result.materials.length > 0 && (
                 <div>
-                  <dt className="label text-gray">Material</dt>
+                  <dt className="label text-gray">{f.material}</dt>
                   {result.materials.map((m) => (
                     <dd key={m.id} className="mt-1.5">
                       <Link href={`/materials/${m.id}`} className="heading text-white uppercase hover:text-blue-bright">
@@ -133,7 +129,7 @@ export function FinderResultView({ result }: { result: FinderResult }) {
               )}
               {result.markets.length > 0 && (
                 <div>
-                  <dt className="label text-gray">Industry experience</dt>
+                  <dt className="label text-gray">{f.industry}</dt>
                   {result.markets.map((m) => (
                     <dd key={m.id} className="mt-1.5">
                       <Link href={m.href} className="heading text-white uppercase hover:text-blue-bright">
@@ -145,7 +141,7 @@ export function FinderResultView({ result }: { result: FinderResult }) {
               )}
               {result.needs.length > 0 && (
                 <div className="col-span-2">
-                  <dt className="label text-gray">Stage</dt>
+                  <dt className="label text-gray">{f.stage}</dt>
                   {result.needs.map((n) => (
                     <dd key={n.id} className="mt-1.5 text-[0.95rem] text-white/85">
                       <span className="heading uppercase text-white">{n.label}</span> · {n.detail}
@@ -158,9 +154,9 @@ export function FinderResultView({ result }: { result: FinderResult }) {
           </section>
 
           {/* Capabilities column */}
-          <section className="bg-ink p-5 sm:p-7 lg:col-span-7" aria-label="Matched capabilities">
+          <section className="bg-ink p-5 sm:p-7 lg:col-span-7" aria-label={f.matched}>
             <p className="label rise text-gray" style={d(step)}>
-              Matched capabilities
+              {f.matched}
             </p>
             <div className="mt-3 space-y-6">
               {result.groups.map((g, gi) => (
@@ -173,7 +169,7 @@ export function FinderResultView({ result }: { result: FinderResult }) {
                           <Link href={c.href} className="heading text-lg uppercase text-white hover:text-blue-bright">
                             {c.name}
                           </Link>
-                          {c.partner && <span className="label shrink-0 text-[0.66rem] text-gray">via APC</span>}
+                          {c.partner && <span className="label shrink-0 text-[0.66rem] text-gray">{dict.common.viaApc}</span>}
                         </div>
                         <div className="mt-2 h-[3px] w-full bg-white/[0.07]" aria-hidden>
                           <div className="meter h-full bg-blue-bright" style={{ width: `${Math.round(c.strength * 100)}%`, ...d(gi + 2) }} />
@@ -182,14 +178,14 @@ export function FinderResultView({ result }: { result: FinderResult }) {
                           <ul className="mt-3 space-y-1.5">
                             {c.reasons.slice(0, 2).map((r) => (
                               <li key={r.text} className="text-[0.92rem] leading-snug text-white/75">
-                                {r.term && <span className="mr-2 border border-white/15 px-1.5 py-0.5 font-mono text-[0.72rem] text-white">{r.term}</span>}
+                                {r.term && <span className="me-2 border border-white/15 px-1.5 py-0.5 font-mono text-[0.72rem] text-white">{r.term}</span>}
                                 {r.text}
                               </li>
                             ))}
                           </ul>
                         )}
                         <p className="label mt-3 text-[0.7rem] leading-relaxed text-gray">
-                          <span className="text-white/45">On record: </span>
+                          <span className="text-white/45">{f.onRecord} </span>
                           {c.evidence.join(" · ")}
                         </p>
                       </li>
@@ -203,14 +199,14 @@ export function FinderResultView({ result }: { result: FinderResult }) {
       )}
 
       {result.flags.length > 0 && (
-        <section className="rise border border-amber-300/30 bg-amber-300/[0.05] p-5" style={d(step + 3)} aria-label="Items to confirm">
+        <section className="rise border border-amber-300/30 bg-amber-300/[0.05] p-5" style={d(step + 3)} aria-label={f.itemsToConfirm}>
           <p className="label flex items-center gap-2 text-amber-200">
-            <Alert size={15} /> Confirm with engineering
+            <Alert size={15} /> {f.confirm}
           </p>
           <ul className="mt-3 space-y-2">
             {result.flags.map((f) => (
               <li key={f.term} className="text-[0.95rem] text-white/85">
-                <span className="mr-2 font-mono text-[0.78rem] text-amber-100">&ldquo;{f.term}&rdquo;</span>
+                <span className="me-2 font-mono text-[0.78rem] text-amber-100">&ldquo;{f.term}&rdquo;</span>
                 {f.message}
               </li>
             ))}
@@ -227,15 +223,15 @@ export function FinderResultView({ result }: { result: FinderResult }) {
       {(hasMatches || result.flags.length > 0) && (
         <div className="rise grid gap-px bg-white/10 sm:grid-cols-3" style={d(step + 4)}>
           <Link href={exploreHref} className="group flex items-center justify-between gap-3 bg-navy-800 px-5 py-4 text-white hover:bg-navy-700">
-            <span className="label">Explore these capabilities</span>
+            <span className="label">{f.explore}</span>
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </Link>
           <a href={company.phoneHref} className="group flex items-center justify-between gap-3 bg-navy-800 px-5 py-4 text-white hover:bg-navy-700">
-            <span className="label">Talk to manufacturing</span>
+            <span className="label">{f.talk}</span>
             <Phone size={16} />
           </a>
           <Link href={rfqHref} className="group flex items-center justify-between gap-3 bg-blue px-5 py-4 text-white hover:bg-blue-600">
-            <span className="label">Start an RFQ</span>
+            <span className="label">{f.rfq}</span>
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </Link>
         </div>

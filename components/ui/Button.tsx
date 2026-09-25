@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/ui/LocaleLink";
 import type { ComponentProps, ReactNode } from "react";
 import { ArrowRight } from "./Icons";
 

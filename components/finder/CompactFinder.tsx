@@ -3,15 +3,16 @@
 import { useState, type FormEvent } from "react";
 import { askFinder } from "@/lib/finder/events";
 import { ArrowRight, Reticle } from "@/components/ui/Icons";
+import { useI18n } from "@/components/i18n/I18nProvider";
 
 /** Single-line Finder entry used in the hero and on detail-page sidebars. */
 export function CompactFinder({
   id,
-  label = "What do you need to manufacture?",
-  placeholder = "Describe your part, product or manufacturing challenge…",
+  label,
+  placeholder,
   suggestions = [],
   tone = "dark",
-  button = "Find",
+  button,
   stacked = false,
   prefix = "",
 }: {
@@ -25,6 +26,10 @@ export function CompactFinder({
   /** Prepended to the query for context, e.g. "Tube bending: ". */
   prefix?: string;
 }) {
+  const { dict } = useI18n();
+  label ??= dict.finder.compactLabel;
+  placeholder ??= dict.finder.placeholder;
+  button ??= dict.finder.find;
   const [value, setValue] = useState("");
   const submit = (e: FormEvent) => {
     e.preventDefault();
@@ -34,7 +39,7 @@ export function CompactFinder({
 
   return (
     <div>
-      <form onSubmit={submit} role="search" aria-label="Capability Finder">
+      <form onSubmit={submit} role="search" aria-label={dict.finder.dialogTitle}>
         <label htmlFor={id} className={`label block ${dark ? "text-white" : "text-navy"}`}>
           {label}
         </label>
@@ -46,7 +51,7 @@ export function CompactFinder({
           }`}
         >
           <div className="flex flex-1 items-center">
-            <Reticle size={20} className={`ml-4 shrink-0 ${dark ? "text-blue-bright" : "text-blue"}`} />
+            <Reticle size={20} className={`ms-4 shrink-0 ${dark ? "text-blue-bright" : "text-blue"}`} />
             <input
               id={id}
               value={value}

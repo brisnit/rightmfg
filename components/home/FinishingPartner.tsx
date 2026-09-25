@@ -1,27 +1,30 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
-import { apc, images } from "@/data/company";
+import { getI18n } from "@/lib/i18n/server";
 
-export function FinishingPartner() {
+export async function FinishingPartner() {
+  const { dict, content } = await getI18n();
+  const d = dict.apcSection;
+  const { apc, images } = content;
   return (
     <section aria-labelledby="apc-title" className="bg-mist py-20 lg:py-28">
       <div className="container-x grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">
           <Reveal plain className="flex items-center gap-4">
             <span className="label tabular text-blue">08</span>
-            <span className="label text-steel">Finishing · Action Powder Coating</span>
+            <span className="label text-steel">{d.label}</span>
             <span className="rule-draw h-px flex-1 bg-navy/15" aria-hidden />
           </Reveal>
           <Reveal>
             <h2 id="apc-title" className="display mt-8 text-[clamp(2rem,3.6vw,3.3rem)] text-navy">
-              Finished through a 35-year partnership.
+              {d.title}
             </h2>
             <p className="mt-6 text-[1.05rem] leading-relaxed text-steel">{apc.summary}</p>
           </Reveal>
           <Reveal delay={100} className="mt-8 grid grid-cols-2 gap-px bg-navy/12">
             {apc.lines.map((l) => (
-              <div key={l.name} className="bg-mist py-4 pr-4 [&:nth-child(2)]:pl-4">
+              <div key={l.name} className="bg-mist py-4 pe-4 [&:nth-child(2)]:ps-4">
                 <p className="heading text-navy">{l.name}</p>
                 <p className="mt-1 text-sm text-steel">{l.detail}</p>
               </div>
@@ -37,7 +40,7 @@ export function FinishingPartner() {
               ))}
             </ul>
             <Button href="/capabilities/finishing" variant="ghost-dark" className="mt-8">
-              Finishing capabilities
+              {d.link}
             </Button>
           </Reveal>
         </div>

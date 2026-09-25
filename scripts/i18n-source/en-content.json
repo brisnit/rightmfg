@@ -1,0 +1,1337 @@
+{
+  "company": {
+    "location": "San Diego, California",
+    "mission": "Founded nearly three decades ago with a service-first mission. That mission continues today through a 35-person company that averages 20+ years of experience.",
+    "values": [
+      "People are our most valuable asset.",
+      "Protecting natural resources and promoting environmental stewardship.",
+      "A service-first, customer-first attitude."
+    ],
+    "leadershipRoles": [
+      "General Manager",
+      "Customer Service Manager",
+      "Production Manager"
+    ]
+  },
+  "headlineStats": [
+    {
+      "label": "Years in the industry",
+      "detail": "Founded in the 1990s in San Diego's industrial core."
+    },
+    {
+      "label": "Sq. ft. facility",
+      "detail": "San Diego, California."
+    },
+    {
+      "label": "Precision parts / year",
+      "detail": "Manufactured annually."
+    },
+    {
+      "label": "Client retention",
+      "detail": "Customers who keep coming back."
+    }
+  ],
+  "teamStats": [
+    {
+      "label": "Person team",
+      "detail": "Operators, engineers and customer service."
+    },
+    {
+      "label": "Years average experience",
+      "detail": "Across the team."
+    },
+    {
+      "label": "Turnaround",
+      "detail": "On select prototypes and rush orders."
+    }
+  ],
+  "equipment": [
+    {
+      "name": "Pull-type mandrel tube benders",
+      "detail": "100+ bending dies for round and square tube · plane-of-bend control · pressure die assist"
+    },
+    {
+      "name": "Wiedemann C2500 & C3000",
+      "detail": "CNC turret punch machines"
+    },
+    {
+      "name": "Cincinnati CNC press brakes",
+      "detail": "60, 90 and 135 ton"
+    },
+    {
+      "name": "Bliss punch presses",
+      "detail": "5 to 60 tons"
+    },
+    {
+      "name": "HAAS CNC vertical mills",
+      "detail": "Machining of formed and fabricated parts"
+    },
+    {
+      "name": "Cut-off saws",
+      "detail": "Tube and profile cut-off"
+    }
+  ],
+  "apc": {
+    "summary": "Right Manufacturing and APC have partnered for 35 years, both located in the heart of San Diego's industrial complex. APC applies highly durable powder coatings that are both attractive and environmentally friendly.",
+    "lines": [
+      {
+        "name": "Automatic conveyor line",
+        "detail": "High-volume products at cost-competitive pricing."
+      },
+      {
+        "name": "Batch application",
+        "detail": "Larger units and smaller volumes."
+      }
+    ],
+    "services": [
+      "Sand blasting",
+      "Masking",
+      "Ionic multi-stage substrate wash",
+      "Cerakote & powder coating",
+      "Refurbishment and reclamation",
+      "Assembly, finishing",
+      "Laser engraving / part marking"
+    ]
+  },
+  "images": {
+    "hero": "Operator loading sheet stock into a CNC press brake",
+    "mandrel": "Gloved hands setting tube in a pull-type mandrel bender",
+    "mandrelBw": "Mandrel tube bender tooling and bend die",
+    "tubeStock": "Stacked punched square aluminum tube",
+    "extrusions": "Custom aluminum extrusions with protective film staged for processing",
+    "turret": "CNC turret punch table with sheet clamps",
+    "turret2": "CNC turret punch machine bed",
+    "mill": "HAAS CNC vertical mill machining aluminum profiles under coolant",
+    "brackets": "Formed sheet metal brackets with punched slots assembled to a frame",
+    "surfacePrep": "Fabricator finishing a formed panel with an orbital sander",
+    "surfacePrepDetail": "Close-up of orbital sanding on a metal panel",
+    "brakeDetail": "Gloved hand positioning a formed part in a press brake",
+    "brakeWide": "Operator feeding sheet into a press brake",
+    "brakeOperator": "Right Manufacturing operator forming a perforated sheet on a press brake",
+    "brakeOperator2": "Experienced operator aligning a part against the press brake backgauge",
+    "weldingWide": "Welder joining a fabricated tube frame",
+    "welding": "Welder joining a fabricated tube frame",
+    "powderLine": "Formed tube parts hanging on the APC powder coating line",
+    "powderParts": "Coated sheet metal parts on racks",
+    "powderBooth": "Powder coating technician in a spray booth",
+    "powderPortrait": "Technician applying powder coat to racked parts",
+    "panels": "Formed sheet metal panels with large punched openings",
+    "partDetail": "Black coated formed part with punched slots",
+    "cartFrame": "Red coated bent tube cart frame",
+    "tubePoster": "Mandrel bender forming a tube"
+  },
+  "categoryLabels": {
+    "tube": "Tube Forming",
+    "sheet-metal": "Sheet Metal",
+    "joining": "Welding",
+    "secondary": "Secondary Operations",
+    "finishing": "Finishing",
+    "engineering": "Engineering & Production"
+  },
+  "capabilities": {
+    "mandrel-tube-bending": {
+      "name": "Mandrel Tube Bending",
+      "description": "CNC-controlled mandrel bending of round and square tube, from prototype to full production.",
+      "evidence": [
+        "2 pull-type mandrel tube benders",
+        "100+ bending dies covering a wide variety of round and square tubes",
+        "Pressure die assist"
+      ],
+      "applications": [
+        "Equipment support structures",
+        "Carts and frames",
+        "Handles and rails",
+        "Structural and fluid-conveying tubing"
+      ]
+    },
+    "3d-bending": {
+      "name": "3D Bending — Tube & Channel",
+      "description": "Multi-plane, compound bends in tube and channel, held in orientation with plane-of-bend control.",
+      "evidence": [
+        "3D bending of tubes and channels",
+        "Plane-of-bend control on the mandrel benders"
+      ],
+      "applications": [
+        "Multi-plane frames",
+        "Formed channel",
+        "Complex tubular geometry"
+      ]
+    },
+    "tube-cutoff": {
+      "name": "Tube Cut-Off",
+      "description": "Cutting tube and profiles to length ahead of bending, punching and welding.",
+      "evidence": [
+        "2 cut-off saws"
+      ],
+      "applications": [
+        "Tube blanks",
+        "Extrusion lengths"
+      ]
+    },
+    "tube-punching": {
+      "name": "Tube Punching",
+      "description": "Punched holes and features in tube for hardware, fasteners and mounting.",
+      "evidence": [
+        "Tube punching"
+      ],
+      "applications": [
+        "Hole patterns for hardware",
+        "Slotted tube"
+      ]
+    },
+    "tube-drill-milling": {
+      "name": "Tube Drilling & Milling",
+      "description": "Drilled and milled features in tube and profiles.",
+      "evidence": [
+        "Tube drill – milling"
+      ],
+      "applications": [
+        "Tube joints prepared for welding",
+        "Drilled mounting features"
+      ]
+    },
+    "cnc-turret-punching": {
+      "name": "CNC Turret Punching",
+      "description": "CNC punching of holes, slots and cutouts in flat sheet ahead of forming.",
+      "evidence": [
+        "3 Wiedemann C2500 & C3000 CNC turret punch machines"
+      ],
+      "applications": [
+        "Enclosure flat patterns",
+        "Brackets",
+        "Perforated and vented panels"
+      ]
+    },
+    "cnc-press-brake": {
+      "name": "CNC Press Brake Forming",
+      "description": "Hydraulic CNC press brakes form bends, radii, curls and folded features into flat sheet stock.",
+      "evidence": [
+        "4 Cincinnati CNC press brakes — 60, 90 and 135 ton",
+        "Forms bends, radii, curls and other features into flat sheet stock"
+      ],
+      "applications": [
+        "Brackets and mounting tabs",
+        "Enclosures and housings",
+        "Monitor and display components",
+        "Panels"
+      ]
+    },
+    "punch-press": {
+      "name": "Punch Press Operations",
+      "description": "Punch presses for repeat punching and forming operations in production quantities.",
+      "evidence": [
+        "6 Bliss punch presses ranging from 5 to 60 tons"
+      ],
+      "applications": [
+        "Repeat punched features",
+        "Production brackets"
+      ]
+    },
+    "shearing": {
+      "name": "Shearing",
+      "description": "Shear cutting of sheet stock ahead of punching and forming.",
+      "evidence": [
+        "Shear – cutting operations"
+      ],
+      "applications": [
+        "Blanks",
+        "Strips",
+        "Plates cut to size"
+      ]
+    },
+    "tig-welding": {
+      "name": "TIG Welding",
+      "description": "Controlled, detailed welds on steel, stainless steel and aluminum alloy assemblies.",
+      "evidence": [
+        "TIG welding on steel, stainless steel and aluminum alloys",
+        "Welds inspected for strength and finish"
+      ],
+      "applications": [
+        "Welded tube frames",
+        "Mounting tabs and brackets",
+        "Cosmetic stainless and aluminum welds"
+      ]
+    },
+    "mig-welding": {
+      "name": "MIG Welding",
+      "description": "Fast, strong welds for fabricated steel and aluminum assemblies.",
+      "evidence": [
+        "MIG welding on steel, stainless steel and aluminum alloys"
+      ],
+      "applications": [
+        "Structural frames",
+        "Carbon steel weldments",
+        "Production welded assemblies"
+      ]
+    },
+    "spot-welding": {
+      "name": "Spot Welding",
+      "description": "Resistance spot welding for joining sheet metal lap joints without filler.",
+      "evidence": [
+        "Spot welding"
+      ],
+      "applications": [
+        "Sheet metal enclosures",
+        "Panel assemblies"
+      ]
+    },
+    "cnc-machining": {
+      "name": "CNC Machining",
+      "description": "Machined features on formed and fabricated parts on CNC vertical mills.",
+      "evidence": [
+        "3 HAAS CNC vertical mills"
+      ],
+      "applications": [
+        "Machined extrusions",
+        "Tapped and drilled features",
+        "Secondary machining after forming"
+      ]
+    },
+    "hardware-installation": {
+      "name": "Hardware Installation",
+      "description": "Fasteners, hinges, latches and brackets integrated during fabrication so parts arrive ready to use.",
+      "evidence": [
+        "Component integration and fastener fitting",
+        "Hardware compatibility and alignment double-checked before delivery"
+      ],
+      "applications": [
+        "Hinged doors and panels",
+        "Parts with installed fasteners",
+        "Mounting hardware"
+      ]
+    },
+    "assembly": {
+      "name": "Assembly — Mid & High Level",
+      "description": "Mid- and high-level assembly of fabricated components into finished units.",
+      "evidence": [
+        "Assembly (mid & high level)",
+        "Streamlined operations reduce assembly time and outsourcing delays"
+      ],
+      "applications": [
+        "Carts",
+        "Equipment support structures",
+        "Multi-part assemblies"
+      ]
+    },
+    "packaging-logistics": {
+      "name": "Packaging & Logistics",
+      "description": "Packaging and delivery of finished parts and assemblies, ready for your line.",
+      "evidence": [
+        "Packaging and logistics"
+      ],
+      "applications": [
+        "Packaged assemblies",
+        "Production deliveries"
+      ]
+    },
+    "powder-coating": {
+      "name": "Powder Coating & Cerakote",
+      "description": "Durable powder coatings and Cerakote through sister company Action Powder Coating — conveyor line for volume, batch for large units.",
+      "evidence": [
+        "Automatic conveyor line for high-volume products",
+        "Batch application for larger units and smaller volumes",
+        "35-year partnership with Action Powder Coating"
+      ],
+      "applications": [
+        "Coated frames and carts",
+        "Outdoor metalwork",
+        "Medical equipment exteriors"
+      ]
+    },
+    "surface-prep": {
+      "name": "Blasting, Masking & Substrate Wash",
+      "description": "Sand blasting, masking and ionic multi-stage substrate wash ahead of coating.",
+      "evidence": [
+        "Sand blasting",
+        "Masking",
+        "Ionic multi-stage substrate wash"
+      ],
+      "applications": [
+        "Coating preparation",
+        "Refurbishment and reclamation"
+      ]
+    },
+    "part-marking": {
+      "name": "Laser Engraving & Part Marking",
+      "description": "Laser engraving and part marking for identification and traceability.",
+      "evidence": [
+        "Laser engraving / part marking"
+      ],
+      "applications": [
+        "Part numbers and serials",
+        "Logos"
+      ]
+    },
+    "engineering-support": {
+      "name": "Engineering & Design Support",
+      "description": "Engineers help with product design, material selection, fabrication and assembly before metal is cut.",
+      "evidence": [
+        "Engineers with 30+ years of experience assist in product design, fabrication and assembly",
+        "Material consulting — strength, corrosion resistance, weight and weldability"
+      ],
+      "applications": [
+        "Design review",
+        "Material selection",
+        "Process planning"
+      ]
+    },
+    "prototyping": {
+      "name": "Prototyping",
+      "description": "Prototype development to validate designs and test function before production — built with production-level precision.",
+      "evidence": [
+        "48-hour turnaround on select prototypes and rush orders",
+        "Prototypes fabricated with the same attention to precision as large-scale orders"
+      ],
+      "applications": [
+        "Design validation",
+        "Functional prototypes",
+        "Pilot builds"
+      ]
+    },
+    "production-manufacturing": {
+      "name": "Scalable Production",
+      "description": "Repeatable production runs — from high-mix, lower-volume programs to higher-volume parts.",
+      "evidence": [
+        "10,000+ precision parts manufactured annually",
+        "Consistent material inventory to support fast turnaround and scalable production"
+      ],
+      "applications": [
+        "Recurring production",
+        "High-mix programs"
+      ]
+    }
+  },
+  "services": {
+    "tube-bending": {
+      "name": "Tube Bending",
+      "eyebrow": "Capability / Tube Forming",
+      "headline": [
+        "Complex geometry.",
+        "Repeatable precision."
+      ],
+      "summary": "CNC-controlled mandrel bending, 3D bending of tube and channel, cut-off, punching and drilling. Structural and fluid-conveying tubing for medical, automotive, industrial and specialty builds, from the first prototype through full production.",
+      "overview": [
+        "Tube bending shapes tubing into curves and angles without cutting it. Fewer joints means fewer welds, better appearance, and often a stronger frame.",
+        "Right runs two pull-type mandrel benders with a library of more than 100 bending dies for round and square tube. Plane-of-bend control keeps multi-plane (3D) parts in orientation from bend to bend. Pressure die assist supports the tube wall through tighter bends.",
+        "Tube arrives cut to length on dedicated cut-off saws, then gets punched, drilled or milled as needed, ready for welding, hardware and assembly. The operators running these machines are the core of the tube capability."
+      ],
+      "equipment": [
+        {
+          "label": "Mandrel benders",
+          "value": "2 × pull-type"
+        },
+        {
+          "label": "Bending dies",
+          "value": "100+"
+        },
+        {
+          "label": "Tube profiles",
+          "value": "Round & square"
+        },
+        {
+          "label": "Cut-off saws",
+          "value": "2"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Processes",
+          "items": [
+            "Mandrel tube bending",
+            "3D bending — tube & channel",
+            "Tube cut-off",
+            "Tube punching",
+            "Tube drilling & milling"
+          ]
+        },
+        {
+          "label": "Bender features",
+          "items": [
+            "Plane-of-bend control",
+            "Pressure die assist",
+            "CNC-controlled"
+          ]
+        },
+        {
+          "label": "Shapes",
+          "items": [
+            "Round tube — OD + wall (gauge)",
+            "Pipe — ID + wall (schedule)",
+            "Square tube",
+            "Rectangular tube",
+            "Custom extruded shapes"
+          ]
+        },
+        {
+          "label": "Tubing",
+          "items": [
+            "Seamless and welded tubing",
+            "Structural and fluid-conveying"
+          ]
+        }
+      ],
+      "questions": [
+        "Can you bend square tubing?",
+        "I need a stainless tube frame with multiple bends and welded brackets",
+        "Can you handle prototypes?",
+        "Aluminum tubing bent, welded and assembled"
+      ],
+      "faqs": [
+        {
+          "q": "What is tube bending used for?",
+          "a": "Shaping metal tubing into curves or angles without cutting the tube. It's common in automotive, furniture, medical carts and industrial equipment."
+        },
+        {
+          "q": "What's the difference between tube forming and tube bending?",
+          "a": "Tube forming often changes the tube's shape or diameter, such as expanding, reducing or flaring. Bending just curves it."
+        },
+        {
+          "q": "Is tube bending better than welding joints for frames?",
+          "a": "In many cases, yes. Bending avoids seams and can improve strength and appearance, though the best choice depends on the structure."
+        },
+        {
+          "q": "How long does it take to bend and process tubing?",
+          "a": "It depends on complexity and quantity. Simple jobs can be same-day or next-day in some cases, and select prototypes and rush orders can turn in 48 hours. Right confirms timing once specs are reviewed."
+        }
+      ]
+    },
+    "sheet-metal": {
+      "name": "Sheet Metal",
+      "eyebrow": "Capability / Sheet Metal",
+      "headline": [
+        "Flat stock.",
+        "Formed exactly."
+      ],
+      "summary": "Shearing, CNC turret punching, CNC press brake forming and punch press operations. Brackets, enclosures, panels and components made to exact dimensions.",
+      "overview": [
+        "Sheet metal work starts flat. Right shears blanks, then punches holes, slots and cutouts on three Wiedemann CNC turret punch machines.",
+        "Four Cincinnati CNC press brakes (60, 90 and 135 ton) use hydraulic pressure to drive die-sets into the sheet, forming bends, radii, curls and folded features. Each part is programmed for bend sequence, pressure, dwell and part position, which is how complex 'origami' shapes stay repeatable.",
+        "Six Bliss punch presses from 5 to 60 tons handle repeat operations at production volumes. Formed parts then move to welding, hardware installation, assembly and APC finishing."
+      ],
+      "equipment": [
+        {
+          "label": "CNC turret punches",
+          "value": "3 × Wiedemann"
+        },
+        {
+          "label": "CNC press brakes",
+          "value": "4 × Cincinnati"
+        },
+        {
+          "label": "Press brake tonnage",
+          "value": "60 / 90 / 135"
+        },
+        {
+          "label": "Punch presses",
+          "value": "6 × Bliss, 5–60 T"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Processes",
+          "items": [
+            "Shearing",
+            "CNC turret punching",
+            "CNC press brake forming",
+            "Punch press operations"
+          ]
+        },
+        {
+          "label": "Turret punches",
+          "items": [
+            "Wiedemann C2500",
+            "Wiedemann C3000"
+          ]
+        },
+        {
+          "label": "Forming",
+          "items": [
+            "Bends",
+            "Radii",
+            "Curls",
+            "Multi-bend 'origami' shapes"
+          ]
+        }
+      ],
+      "questions": [
+        "Sheet metal enclosure with hardware and powder coat",
+        "Formed stainless brackets for medical equipment",
+        "What press brakes do you have?"
+      ],
+      "faqs": [
+        {
+          "q": "What is sheet metal used for?",
+          "a": "Enclosures, brackets, panels and covers across construction, automotive, appliances, HVAC and electronics."
+        },
+        {
+          "q": "Is sheet metal good for outdoor projects?",
+          "a": "Yes. Stainless steel or properly finished steel holds up well to moisture and weather."
+        },
+        {
+          "q": "Can sheet metal be powder coated?",
+          "a": "Yes. Powder coating and Cerakote are available through sister company Action Powder Coating."
+        },
+        {
+          "q": "How long does sheet metal work take?",
+          "a": "Lead times depend on complexity, material availability and finish. Right provides an estimate once the design is reviewed."
+        }
+      ]
+    },
+    "welding": {
+      "name": "Welding",
+      "eyebrow": "Capability / Joining",
+      "headline": [
+        "Clean welds.",
+        "Strong assemblies."
+      ],
+      "summary": "MIG, TIG and spot welding on steel, stainless steel and aluminum alloys. Fabricated assemblies with welds inspected for strength and finish.",
+      "overview": [
+        "Welding joins formed tube and sheet into working assemblies. Experienced technicians weld on calibrated equipment with process controls in place.",
+        "TIG gives detailed control for visible stainless and aluminum welds. MIG is fast and strong for structural frames. Spot welding joins sheet metal lap joints without filler.",
+        "Welding sits in the same flow as forming, punching and machining, so fit-up is planned before the first bend and assemblies move on to hardware, finishing and assembly without leaving the process."
+      ],
+      "equipment": [
+        {
+          "label": "Processes",
+          "value": "MIG · TIG · Spot"
+        },
+        {
+          "label": "Materials",
+          "value": "Steel · SS · Al"
+        },
+        {
+          "label": "Inspection",
+          "value": "Strength & finish"
+        },
+        {
+          "label": "Volumes",
+          "value": "Proto → production"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Processes",
+          "items": [
+            "MIG welding",
+            "TIG welding",
+            "Spot welding"
+          ]
+        },
+        {
+          "label": "Materials",
+          "items": [
+            "Steel",
+            "Stainless steel",
+            "Aluminum alloys"
+          ]
+        },
+        {
+          "label": "Work types",
+          "items": [
+            "Welded tube frames",
+            "Brackets and mounting tabs",
+            "Sheet metal assemblies",
+            "High-mix custom assemblies"
+          ]
+        }
+      ],
+      "questions": [
+        "Do you do welding?",
+        "TIG welded aluminum frame",
+        "What's the difference between MIG and TIG?"
+      ],
+      "faqs": [
+        {
+          "q": "What's the difference between MIG, TIG and spot welding?",
+          "a": "MIG is quick and clean for structural welds. TIG gives more detailed control for visible or thin work. Spot welding joins overlapping sheet without filler."
+        },
+        {
+          "q": "How long does welding take?",
+          "a": "It depends on the job. Right gives a time estimate before work starts."
+        },
+        {
+          "q": "Is fabrication different from welding?",
+          "a": "Yes. Fabrication is the full process of building a part from metal. Welding is one step that joins the pieces."
+        }
+      ]
+    },
+    "assembly": {
+      "name": "Hardware, Assembly & Machining",
+      "eyebrow": "Capability / Secondary Operations",
+      "headline": [
+        "Delivered complete.",
+        "Ready to install."
+      ],
+      "summary": "Hardware installation, mid- and high-level assembly, CNC machining, packaging and logistics, so parts arrive ready for use or the next manufacturing step.",
+      "overview": [
+        "Right handles component integration, fastener fitting and packaging to keep programs on schedule. Hardware is installed during fabrication, which cuts installation time and the risk of rework or misfit.",
+        "Hardware compatibility and alignment are double-checked before delivery. Fasteners, hinges, latches or specialty brackets are chosen or customized to match form tolerances and material.",
+        "Three HAAS CNC vertical mills add machined features to formed and fabricated parts, and packaging and logistics bring finished assemblies to your dock ready to use."
+      ],
+      "equipment": [
+        {
+          "label": "CNC vertical mills",
+          "value": "3 × HAAS"
+        },
+        {
+          "label": "Assembly",
+          "value": "Mid & high level"
+        },
+        {
+          "label": "Hardware check",
+          "value": "Before delivery"
+        },
+        {
+          "label": "Packaging",
+          "value": "& logistics"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Hardware",
+          "items": [
+            "Fasteners",
+            "Hinges",
+            "Latches",
+            "Brackets",
+            "Custom-length pins and load-bearing mounts"
+          ]
+        },
+        {
+          "label": "Assembly",
+          "items": [
+            "Component integration",
+            "Fastener fitting",
+            "Mid-level assembly",
+            "High-level assembly"
+          ]
+        },
+        {
+          "label": "Machining",
+          "items": [
+            "HAAS CNC vertical mills",
+            "Machined features on formed parts"
+          ]
+        },
+        {
+          "label": "Delivery",
+          "items": [
+            "Packaging",
+            "Logistics"
+          ]
+        }
+      ],
+      "questions": [
+        "Can you assemble and package the finished unit?",
+        "Do you install hardware?",
+        "Do you do machining?"
+      ],
+      "faqs": [
+        {
+          "q": "What is hardware in metal fabrication?",
+          "a": "The mechanical parts that connect, secure or support metal structures: fasteners, hinges, latches, brackets and other small components."
+        },
+        {
+          "q": "Standard or custom hardware?",
+          "a": "It depends on the project. Some parts work with off-the-shelf hardware, while unique shapes or loads may need custom components. Right reviews your specs to decide."
+        },
+        {
+          "q": "What's the difference between hardware and structural parts?",
+          "a": "Hardware is the smaller connecting pieces. Structural parts are the main load-bearing sections."
+        }
+      ]
+    },
+    "finishing": {
+      "name": "Finishing",
+      "eyebrow": "Capability / Finishing — with APC",
+      "headline": [
+        "Finished in San Diego.",
+        "Partnered for 35 years."
+      ],
+      "summary": "Powder coating, Cerakote, sand blasting, masking, substrate wash and laser part marking through sister company Action Powder Coating.",
+      "overview": [
+        "Right Manufacturing and Action Powder Coating (APC) have partnered for 35 years. Both are located in the heart of San Diego's industrial complex.",
+        "APC applies highly durable powder coatings that are both attractive and environmentally friendly. An automatic conveyor line processes high-volume products at competitive cost, and batch application handles larger units and smaller volumes.",
+        "Pre-treatment includes sand blasting, masking and an ionic multi-stage substrate wash. Parts can also be laser engraved or marked, refurbished or reclaimed."
+      ],
+      "equipment": [
+        {
+          "label": "Partnership",
+          "value": "35 years"
+        },
+        {
+          "label": "Volume line",
+          "value": "Auto conveyor"
+        },
+        {
+          "label": "Large units",
+          "value": "Batch"
+        },
+        {
+          "label": "Coatings",
+          "value": "Powder · Cerakote"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Coatings",
+          "items": [
+            "Powder coating",
+            "Cerakote"
+          ]
+        },
+        {
+          "label": "Preparation",
+          "items": [
+            "Sand blasting",
+            "Masking",
+            "Ionic multi-stage substrate wash"
+          ]
+        },
+        {
+          "label": "Other services",
+          "items": [
+            "Laser engraving / part marking",
+            "Refurbishment and reclamation",
+            "Assembly, finishing"
+          ]
+        }
+      ],
+      "questions": [
+        "Can you powder coat the finished parts?",
+        "Do you offer Cerakote?",
+        "Can you laser mark part numbers?"
+      ],
+      "faqs": [
+        {
+          "q": "Who performs finishing?",
+          "a": "Action Powder Coating (APC), Right's sister company and partner of 35 years, also located in the heart of San Diego's industrial complex."
+        },
+        {
+          "q": "Can you handle high-volume coating?",
+          "a": "Yes. APC's automatic conveyor line is built for high-volume products, with batch application for larger units and smaller volumes."
+        }
+      ]
+    }
+  },
+  "materials": {
+    "aluminum": {
+      "name": "Aluminum Alloys",
+      "short": "Aluminum",
+      "description": "Right works across aluminum alloys in sheet, tube and extruded profiles — the choice when weight matters and corrosion resistance is needed.",
+      "considerations": [
+        "Lighter than steel with good natural corrosion resistance.",
+        "Steel is usually stronger; aluminum is recommended where weight matters.",
+        "Welded on Right's MIG and TIG processes."
+      ]
+    },
+    "stainless-steel": {
+      "name": "Stainless Steel",
+      "short": "Stainless",
+      "description": "Stainless steel sheet and tube for parts that must resist moisture, chemicals and repeated cleaning.",
+      "considerations": [
+        "Holds up to moisture and weather when properly finished.",
+        "Often selected when strength and corrosion resistance both matter.",
+        "Welded on Right's MIG, TIG and spot welding processes."
+      ]
+    },
+    "carbon-steel": {
+      "name": "Carbon Steel",
+      "short": "Carbon Steel",
+      "description": "Carbon steel for strength-driven structures, frames and brackets — typically powder coated for protection and appearance.",
+      "considerations": [
+        "Usually the stronger choice for heavy-duty applications.",
+        "Pairs naturally with powder coating through APC.",
+        "Welded on Right's MIG, TIG and spot welding processes."
+      ]
+    }
+  },
+  "tubeShapes": {
+    "round": {
+      "name": "Round tube",
+      "note": "Identified by outside diameter + wall (gauge)"
+    },
+    "pipe": {
+      "name": "Pipe",
+      "note": "Identified by inside diameter + wall (schedule)"
+    },
+    "square": {
+      "name": "Square tube",
+      "note": "Covered by the 100+ die library"
+    },
+    "rectangular": {
+      "name": "Rectangular tube",
+      "note": ""
+    },
+    "extruded": {
+      "name": "Custom extruded shapes",
+      "note": ""
+    }
+  },
+  "markets": {
+    "medical": {
+      "name": "Medical",
+      "short": "Medical",
+      "headline": "Precision fabrication for products where quality cannot be an afterthought.",
+      "summary": "Carts, monitor display components and equipment support structures for medical device OEMs.",
+      "why": "Medical equipment lives in front of clinicians and patients. Frames have to be straight and repeatable, welds clean, and exterior finishes durable and environmentally clean. Right combines tube bending, sheet metal forming, TIG welding and assembly with APC finishing, so structures arrive complete.",
+      "sourceNotes": [
+        "Advanced medical devices and products require leading-edge technologies and environmentally clean exterior coating.",
+        "Right solutions include carts, monitor display components and equipment support structures."
+      ],
+      "applications": [
+        "Equipment carts",
+        "Monitor & display components",
+        "Equipment support structures",
+        "Welded tube frames",
+        "Formed sheet metal covers and brackets"
+      ],
+      "questions": [
+        "Stainless medical equipment frame with welded brackets",
+        "Medical cart with bent tube frame and powder coat",
+        "Can you handle prototypes?"
+      ]
+    },
+    "automotive": {
+      "name": "Automotive / Off Road",
+      "short": "Automotive",
+      "headline": "Built to last the life of the vehicle.",
+      "summary": "Formed and welded components for automotive and off-road programs that need repeatable quality over the product life cycle.",
+      "why": "Automotive and off-road programs run at higher volumes with lower costs and often a high mix of part numbers, and they need product life-cycle management behind them. Mandrel bending with a 100+ die library, repeatable CNC forming and production welding support that from prototype through volume.",
+      "sourceNotes": [
+        "Automotive and off-road applications demand product life-cycle management to support products over their intended life.",
+        "Higher volumes and lower costs with high mix potential characterize this segment."
+      ],
+      "applications": [
+        "Bent tube components",
+        "Brackets and mounts",
+        "Welded frames and racks",
+        "Truck and trailer parts"
+      ],
+      "questions": [
+        "Carbon steel roof rack for off-road trucks, 500 per month",
+        "Bent tube bumper with mounting brackets",
+        "Can you bend square tubing?"
+      ]
+    },
+    "military": {
+      "name": "Military",
+      "short": "Military",
+      "headline": "Fabrication for demanding defense applications.",
+      "summary": "Formed, welded and assembled metal components built to customer drawings and specifications.",
+      "why": "Defense work calls for components built exactly to drawing, with durable finishes and part identification. Right's forming, welding and assembly, together with APC coating and laser part marking, cover the whole route from blank to marked, finished part.",
+      "sourceNotes": [
+        "Military is one of the markets Right Manufacturing serves."
+      ],
+      "applications": [
+        "Fabricated brackets and enclosures",
+        "Welded frames",
+        "Coated and marked components"
+      ],
+      "questions": [
+        "Formed aluminum enclosure with laser part marking",
+        "Welded carbon steel frame, powder coated",
+        "Are you ITAR registered?"
+      ]
+    },
+    "industrial": {
+      "name": "Industrial",
+      "short": "Industrial",
+      "headline": "Durable metalwork for high-mix industrial products.",
+      "summary": "Enclosures, frames, brackets and assemblies for industrial equipment built for tough environments.",
+      "why": "Industrial programs tend to be lower volume and higher mix, and demand swings with the market. Parts still have to survive extreme environments. Right's CNC turret punching, press brakes, welding and machining handle frequent changeovers, and a stocked material inventory keeps turnaround short.",
+      "sourceNotes": [
+        "Product and business requirements for industrial applications are often defined by lower volumes, higher mix product focus, and EAQ volumes often fluctuate with market conditions.",
+        "All while demanding advanced durable solutions suited for extreme environments."
+      ],
+      "applications": [
+        "Equipment enclosures",
+        "Machine frames",
+        "Brackets and mounts",
+        "Water-system and process equipment components"
+      ],
+      "questions": [
+        "Sheet metal enclosure with hardware and powder coat",
+        "Stainless machine guard with punched vents",
+        "Machined aluminum extrusion"
+      ]
+    },
+    "architectural": {
+      "name": "Architectural / Construction",
+      "short": "Architectural",
+      "headline": "Formed metal for the built environment.",
+      "summary": "Formed and fabricated metal components for architectural and construction projects.",
+      "why": "Architectural and construction metalwork is judged on both fit and appearance. Right's press brakes, turret punching, tube bending and welding, finished through APC, turn out consistent, coated components ready to install.",
+      "sourceNotes": [
+        "Architectural / Construction is one of the markets Right Manufacturing serves."
+      ],
+      "applications": [
+        "Formed panels",
+        "Railings and bent tube elements",
+        "Brackets and mounting hardware",
+        "Coated metal components"
+      ],
+      "questions": [
+        "Perforated aluminum panels, powder coated",
+        "Bent stainless handrail",
+        "Formed steel brackets for facade mounting"
+      ]
+    },
+    "decorative": {
+      "name": "Decorative Metal Work",
+      "short": "Decorative",
+      "headline": "Indoor and outdoor decorative metalwork, built properly.",
+      "summary": "Indoor and outdoor decorative metal work — bent, formed, welded and finished.",
+      "why": "Decorative work is structural work that also has to look right. Clean bends, careful TIG welds and durable powder coat or Cerakote finishes let indoor and outdoor pieces hold up and keep their finish.",
+      "sourceNotes": [
+        "Indoor and outdoor decorative metal work are markets Right Manufacturing serves."
+      ],
+      "applications": [
+        "Indoor decorative metal work",
+        "Outdoor decorative metal work",
+        "Bent tube features",
+        "Coated fabricated pieces"
+      ],
+      "questions": [
+        "Outdoor steel gate with bent tube and Cerakote",
+        "Decorative bent tube feature, TIG welded",
+        "What finishes can you do?"
+      ]
+    }
+  },
+  "processSteps": [
+    {
+      "title": "Engineering Review",
+      "body": "Send drawings and requirements. Engineers with 30+ years of experience review specs, help with design and material selection, then return a detailed quote and timeline.",
+      "source": "FAQs · Sheet Metal",
+      "tags": [
+        "Drawings",
+        "Material selection",
+        "Quote & timeline"
+      ]
+    },
+    {
+      "title": "Prototyping",
+      "body": "Prototypes validate design and function before production and are built with the same precision as production orders. Select prototypes and rush orders turn in 48 hours.",
+      "source": "FAQs · Home",
+      "tags": [
+        "Design validation",
+        "48-hr on select parts"
+      ]
+    },
+    {
+      "title": "Process Development",
+      "body": "Bend sequence, pressure, dwell and part positioning are programmed. Tooling is selected from a library of 100+ bending dies.",
+      "source": "Sheet Metal · Tube",
+      "tags": [
+        "CNC programming",
+        "Tooling selection"
+      ]
+    },
+    {
+      "title": "Fabrication",
+      "body": "Shearing, turret punching, press brake forming, mandrel and 3D bending, then MIG, TIG and spot welding on steel, stainless and aluminum.",
+      "source": "Capabilities",
+      "tags": [
+        "Form",
+        "Punch",
+        "Bend",
+        "Weld"
+      ]
+    },
+    {
+      "title": "Assembly",
+      "body": "Hardware installation, CNC machining and mid- to high-level assembly. Powder coating and Cerakote through sister company APC.",
+      "source": "Hardware · APC",
+      "tags": [
+        "Hardware",
+        "Machining",
+        "Finishing"
+      ]
+    },
+    {
+      "title": "Quality",
+      "body": "Welds are inspected for strength and finish, and hardware compatibility and alignment are double-checked before delivery.",
+      "source": "Welding · Hardware",
+      "tags": [
+        "Weld inspection",
+        "Fit & alignment"
+      ]
+    },
+    {
+      "title": "Production",
+      "body": "Repeatable runs from high-mix, lower-volume programs to high volume, backed by a stocked material inventory. More than 10,000 precision parts a year.",
+      "source": "Home · Material",
+      "tags": [
+        "Scalable",
+        "High-mix",
+        "10K+ parts / yr"
+      ]
+    },
+    {
+      "title": "Packaging / Delivery",
+      "body": "Parts are packaged and shipped ready for immediate use or the next manufacturing step.",
+      "source": "Hardware",
+      "tags": [
+        "Packaging",
+        "Logistics"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What services does Right Manufacturing offer?",
+      "a": "Precision metal fabrication and forming: sheet metal, tube bending, welding and assembly. Also material sourcing, prototyping, hardware integration and scalable production, with finishing through sister company Action Powder Coating."
+    },
+    {
+      "q": "What industries do you serve?",
+      "a": "Medical, automotive / off road, industrial, military, architectural / construction, and indoor and outdoor decorative metal work."
+    },
+    {
+      "q": "What materials do you work with?",
+      "a": "Aluminum alloys, carbon steel and stainless steel, in sheet and tube. Each material is chosen for strength, formability and the application, and the team checks that material and design specification are compatible."
+    },
+    {
+      "q": "Can I request a custom prototype before production?",
+      "a": "Yes. Prototype development validates designs and tests function before full production. Prototypes get the same attention to precision as large orders, and select prototypes and rush orders can turn in 48 hours."
+    },
+    {
+      "q": "How do I get started with a project?",
+      "a": "Start a project online or contact the team directly with technical drawings and requirements. Right reviews your specifications and returns a detailed quote and timeline."
+    },
+    {
+      "q": "Is aluminum stronger than steel?",
+      "a": "Steel is usually stronger, but aluminum is lighter and resists corrosion well. Right recommends aluminum where weight matters and steel for heavy-duty strength."
+    },
+    {
+      "q": "How do I pick a metal for my project?",
+      "a": "It depends on how the part is used, the stress it handles and the finish it needs. Right's team helps match the metal to the job."
+    }
+  ],
+  "materialFaqs": [
+    {
+      "q": "Is aluminum stronger than steel?",
+      "a": "Steel is usually stronger, but aluminum is lighter and resists corrosion well. Right recommends aluminum where weight matters and steel for heavy-duty strength."
+    },
+    {
+      "q": "How do I choose a metal for my project?",
+      "a": "It depends on how the part will be used, the stress it handles and the finish it needs. Right's team looks at strength, corrosion resistance, weight and weldability to match the metal to the job."
+    },
+    {
+      "q": "Do you stock material?",
+      "a": "Right keeps a consistent inventory to support fast turnaround and scalable production, and checks material compatibility for both function and finish."
+    }
+  ],
+  "glossary": [
+    {
+      "t": "Mandrel tube bending",
+      "d": "Bending tube around a die while an internal mandrel supports the wall, so the tube keeps its shape through tighter bends."
+    },
+    {
+      "t": "3D bending",
+      "d": "Bends in more than one plane on a single part: tube or channel rotated between bends to create multi-plane geometry."
+    },
+    {
+      "t": "Plane of bend",
+      "d": "The rotational orientation of each bend relative to the previous one. Controlling it keeps 3D parts repeatable."
+    },
+    {
+      "t": "Pressure die assist",
+      "d": "A pressure die that pushes the tube forward during bending to help control the wall through the bend."
+    },
+    {
+      "t": "Pipe vs. tube",
+      "d": "Pipe is identified by inside diameter plus wall (schedule). Tube is identified by outside diameter plus wall (gauge)."
+    },
+    {
+      "t": "CNC turret punch",
+      "d": "A CNC machine that punches holes, slots and shapes into flat sheet from a turret of interchangeable tools."
+    },
+    {
+      "t": "CNC press brake",
+      "d": "A hydraulic press that drives die-sets into flat sheet to form bends, radii and curls. CNC controls sequence, pressure, dwell and part position."
+    },
+    {
+      "t": "MIG welding",
+      "d": "Wire-fed arc welding: fast, strong welds for structural and production work."
+    },
+    {
+      "t": "TIG welding",
+      "d": "Tungsten arc welding with a separately fed filler rod, giving detailed control for visible, thin or stainless and aluminum work."
+    },
+    {
+      "t": "Spot welding",
+      "d": "Resistance welding that joins overlapping sheet at discrete points without filler metal."
+    },
+    {
+      "t": "Powder coating",
+      "d": "A dry powder applied to prepared metal and cured into a hard, durable finish."
+    },
+    {
+      "t": "Cerakote",
+      "d": "A thin-film ceramic coating used where a durable, thin finish is needed."
+    }
+  ],
+  "whyRight": [
+    {
+      "t": "Prototype through production",
+      "b": "The same engineers, operators and equipment build your first part and your ten-thousandth. Select prototypes and rush orders turn in 48 hours."
+    },
+    {
+      "t": "People with decades on the floor",
+      "b": "35 people averaging 20+ years of experience. Engineers with 30+ years help with product design, fabrication and assembly."
+    },
+    {
+      "t": "Equipment on record",
+      "b": "2 pull-type mandrel tube benders, 3 Wiedemann turret punches, 4 Cincinnati CNC press brakes, 6 Bliss punch presses, and more."
+    },
+    {
+      "t": "Fewer vendors",
+      "b": "Forming, welding, hardware, machining, assembly and packaging, with finishing through APC. Less outsourcing means fewer delays."
+    },
+    {
+      "t": "Customers stay",
+      "b": "98% client retention with OEMs including BD, Covidien, Kinetico and Axeon."
+    },
+    {
+      "t": "Rooted in San Diego",
+      "b": "20,000 sq. ft. in the design, manufacturing and technology hub of Southern California, with a consistent material inventory for fast turnaround."
+    }
+  ],
+  "capabilityTiles": [
+    {
+      "title": "Tube",
+      "subtitle": "Mandrel & 3D bending",
+      "subs": [
+        "Mandrel tube bending",
+        "3D bending — tube & channel",
+        "100+ bending dies",
+        "Cut-off · punching · drill & mill"
+      ]
+    },
+    {
+      "title": "Sheet Metal",
+      "subtitle": "Shear · punch · press",
+      "subs": [
+        "Shearing",
+        "CNC turret punching — 3 Wiedemann",
+        "6 Bliss punch presses, 5–60 T",
+        "Flat patterns & cutouts"
+      ]
+    },
+    {
+      "title": "Forming",
+      "subtitle": "CNC press brakes",
+      "subs": [
+        "4 Cincinnati CNC press brakes",
+        "60 · 90 · 135 ton",
+        "Bends, radii & curls",
+        "Complex multi-bend shapes"
+      ]
+    },
+    {
+      "title": "Welding",
+      "subtitle": "MIG · TIG · Spot",
+      "subs": [
+        "MIG welding",
+        "TIG welding",
+        "Spot welding",
+        "Steel · stainless · aluminum"
+      ]
+    },
+    {
+      "title": "Materials",
+      "subtitle": "Sheet, tube & extrusion",
+      "subs": [
+        "Aluminum alloys (all)",
+        "Stainless steel",
+        "Carbon steel",
+        "Consistent stocked inventory"
+      ]
+    },
+    {
+      "title": "Hardware",
+      "subtitle": "Installed & checked",
+      "subs": [
+        "Fasteners",
+        "Hinges & latches",
+        "Brackets & mounts",
+        "Alignment checked before delivery"
+      ]
+    },
+    {
+      "title": "Assembly",
+      "subtitle": "Mid & high level",
+      "subs": [
+        "Component integration",
+        "Mid- & high-level assembly",
+        "Packaging",
+        "Logistics"
+      ]
+    },
+    {
+      "title": "Machining",
+      "subtitle": "CNC vertical milling",
+      "subs": [
+        "3 HAAS CNC vertical mills",
+        "Machined features on formed parts",
+        "Extrusion machining",
+        "Tube drill & mill"
+      ]
+    }
+  ],
+  "capabilityMenu": [
+    {
+      "title": "Forming",
+      "links": [
+        "Tube bending",
+        "3D bending — tube & channel",
+        "Sheet metal",
+        "CNC press brake forming",
+        "CNC turret punching"
+      ]
+    },
+    {
+      "title": "Joining",
+      "links": [
+        "MIG welding",
+        "TIG welding",
+        "Spot welding"
+      ]
+    },
+    {
+      "title": "Materials",
+      "links": [
+        "Aluminum alloys",
+        "Stainless steel",
+        "Carbon steel"
+      ]
+    },
+    {
+      "title": "Secondary",
+      "links": [
+        "Hardware installation",
+        "Assembly",
+        "CNC machining",
+        "Packaging & logistics",
+        "Finishing — with APC"
+      ]
+    }
+  ],
+  "suggestedSearches": [
+    "Stainless medical equipment frame",
+    "Bent aluminum tubing",
+    "Prototype welded assembly",
+    "Sheet metal enclosure"
+  ],
+  "exampleQuestions": [
+    "I need a stainless steel tubular frame for medical equipment with multiple bends and welded mounting brackets.",
+    "An aluminum tubular frame with several compound bends and welded mounting tabs",
+    "Sheet metal enclosure with hardware installed and black powder coat",
+    "Can you bend square tubing?",
+    "Can you handle prototypes?",
+    "What materials do you work with?",
+    "Carbon steel roof rack for off-road trucks, 500 per month",
+    "Do you do welding?"
+  ]
+}

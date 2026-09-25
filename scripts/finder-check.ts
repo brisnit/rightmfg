@@ -1,9 +1,18 @@
 import { runFinder } from "../lib/finder/engine";
+import { getContent } from "../lib/i18n/registry";
+import { isLocale } from "../lib/i18n/config";
+import { finder as en } from "../lib/i18n/locales/en/finder";
+import { finder as ar } from "../lib/i18n/locales/ar/finder";
+import { finder as zh } from "../lib/i18n/locales/zh/finder";
+import { finder as nl } from "../lib/i18n/locales/nl/finder";
 import type { FinderContext } from "../lib/finder/types";
-const qs = process.argv.slice(2);
+const args = process.argv.slice(2);
+const locale = isLocale(args[0]) ? args.shift()! as "en" | "ar" | "zh" | "nl" : "en";
+const k = { locale, content: getContent(locale), text: { en, ar, zh, nl }[locale] };
+const qs = args;
 let ctx: FinderContext | undefined;
 for (const q of qs) {
-  const r = runFinder({ query: q, context: ctx });
+  const r = runFinder({ query: q, context: ctx }, k);
   ctx = r.context;
   console.log("\n### " + q);
   console.log(`mode=${r.mode} coverage=${r.coverage ? r.coverage.percent + "% " + r.coverage.matched + "/" + r.coverage.total : "-"}`);

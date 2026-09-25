@@ -4,8 +4,8 @@ import { useCallback, useEffect, useRef, useState, type FormEvent, type Keyboard
 import { askFinder as runQuery } from "@/lib/finder/provider";
 import { ASK_EVENT, type AskDetail } from "@/lib/finder/events";
 import type { FinderContext, FinderResult } from "@/lib/finder/types";
-import { capabilities } from "@/data/capabilities";
-import { suggestedSearches } from "@/data/finder-knowledge";
+import { useI18n } from "@/components/i18n/I18nProvider";
+import { t as fmt } from "@/lib/i18n/format";
 import { ArrowRight, Reticle, Return } from "@/components/ui/Icons";
 import { Described, FinderResultView } from "./FinderResultView";
 
@@ -16,14 +16,14 @@ interface Turn {
   error?: string;
 }
 
-const STAGES = ["Parsing requirement", `Matching ${capabilities.length} verified capabilities`, "Checking published equipment & materials"];
-
 function Thinking() {
+  const { dict, content } = useI18n();
+  const STAGES = dict.finder.stages.map((s) => fmt(s, { n: content.capabilities.length }));
   const [stage, setStage] = useState(0);
   useEffect(() => {
     const t = setInterval(() => setStage((s) => Math.min(s + 1, STAGES.length - 1)), 260);
     return () => clearInterval(t);
-  }, []);
+  }, [STAGES.length]);
   return (
     <div className="mt-6 max-w-md" role="status" aria-live="polite">
       {STAGES.map((s, i) => (
@@ -31,7 +31,7 @@ function Thinking() {
           <span className="label tabular w-6 text-blue-bright">{String(i + 1).padStart(2, "0")}</span>
           <span className="label flex-1 text-white/80">{s}</span>
           <span className="relative h-px w-16 overflow-hidden bg-white/15">
-            {i === stage ? <span className="scan-bar absolute inset-y-0 left-0 w-1/3 bg-blue-bright" /> : i < stage ? <span className="absolute inset-0 bg-blue-bright" /> : null}
+            {i === stage ? <span className="scan-bar absolute inset-y-0 start-0 w-1/3 bg-blue-bright" /> : i < stage ? <span className="absolute inset-0 bg-blue-bright" /> : null}
           </span>
         </div>
       ))}
@@ -42,7 +42,7 @@ function Thinking() {
 export function FinderPanel({
   listen = false,
   initialQuery,
-  suggestions = suggestedSearches,
+  suggestions,
   autoFocus = false,
   scrollTargetId,
 }: {
@@ -53,6 +53,9 @@ export function FinderPanel({
   autoFocus?: boolean;
   scrollTargetId?: string;
 }) {
+  const { locale, dict, content } = useI18n();
+  const f = dict.finder;
+  const suggestionList = suggestions ?? content.suggestedSearches;
   const [turns, setTurns] = useState<Turn[]>([]);
   const [value, setValue] = useState("");
   const [busy, setBusy] = useState(false);
@@ -73,17 +76,17 @@ export function FinderPanel({
     const reduce = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     try {
       const [result] = await Promise.all([
-        runQuery({ query, context: ctxRef.current }),
+        runQuery({ query, context: ctxRef.current }, locale, content),
         new Promise((r) => setTimeout(r, reduce ? 0 : 820)),
       ]);
       ctxRef.current = result.context;
       setTurns((t) => t.map((x) => (x.id === id ? { ...x, result } : x)));
     } catch {
-      setTurns((t) => t.map((x) => (x.id === id ? { ...x, error: "Something went wrong. Please try again or call 858-566-7002." } : x)));
+      setTurns((t) => t.map((x) => (x.id === id ? { ...x, error: f.error } : x)));
     } finally {
       setBusy(false);
     }
-  }, []);
+  }, [locale, content, f.error]);
 
   // Scroll new turns into view.
   useEffect(() => {
@@ -136,12 +139,12 @@ export function FinderPanel({
   const last = turns[turns.length - 1];
 
   const input = (
-    <form onSubmit={submit} className="group/f relative" role="search" aria-label="Capability Finder">
+    <form onSubmit={submit} className="group/f relative" role="search" aria-label={f.dialogTitle}>
       <label htmlFor="finder-input" className="sr-only">
-        {started ? "Ask a follow-up or describe another part" : "Describe your part, product or manufacturing challenge"}
+        {started ? f.inputLabelFollow : f.inputLabel}
       </label>
       <div className="flex items-stretch border border-white/20 bg-ink/60 transition-[border-color,box-shadow] duration-300 focus-within:border-blue-bright focus-within:shadow-[0_0_0_4px_rgb(74_155_240/0.12)]">
-        <span className="hidden items-start pl-5 pt-[1.15rem] text-blue-bright sm:flex">
+        <span className="hidden items-start ps-5 pt-[1.15rem] text-blue-bright sm:flex">
           <Reticle size={22} />
         </span>
         <textarea
@@ -151,7 +154,7 @@ export function FinderPanel({
           value={value}
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={onKey}
-          placeholder={started ? "Ask a follow-up… e.g. “Can you powder coat it?”" : "Describe your part, product or manufacturing challenge…"}
+          placeholder={started ? f.placeholderFollow : f.placeholder}
           className="min-h-[3.75rem] flex-1 resize-none bg-transparent px-4 py-4 text-[1.05rem] leading-snug text-white placeholder:text-white/40 focus:outline-none sm:px-4 sm:text-lg"
           enterKeyHint="search"
           autoComplete="off"
@@ -160,14 +163,14 @@ export function FinderPanel({
           type="submit"
           disabled={busy || !value.trim()}
           className="label flex w-14 shrink-0 items-center justify-center gap-2 bg-blue text-white transition-colors hover:bg-blue-600 disabled:bg-blue/40 disabled:text-white/60 sm:w-auto sm:px-7"
-          aria-label="Find capabilities"
+          aria-label={f.findAria}
         >
-          <span className="hidden sm:inline">Find</span>
+          <span className="hidden sm:inline">{f.find}</span>
           <ArrowRight size={18} />
         </button>
       </div>
       <p className="label mt-2 hidden text-[0.66rem] text-white/40 sm:block">
-        Enter to search · Shift + Enter for a new line · Matches only Right&apos;s published capabilities
+        {f.hint}
       </p>
     </form>
   );
@@ -178,13 +181,13 @@ export function FinderPanel({
         <>
           {input}
           <div className="mt-5 flex flex-wrap items-center gap-2">
-            <span className="label mr-1 text-gray">Try</span>
-            {suggestions.map((s) => (
+            <span className="label me-1 text-gray">{f.try}</span>
+            {suggestionList.map((s) => (
               <button
                 key={s}
                 type="button"
                 onClick={() => ask(s, { reset: true })}
-                className="border border-white/15 px-3 py-2 text-left text-[0.9rem] text-white/85 transition-colors hover:border-blue-bright hover:text-white"
+                className="border border-white/15 px-3 py-2 text-start text-[0.9rem] text-white/85 transition-colors hover:border-blue-bright hover:text-white"
               >
                 {s}
               </button>
@@ -207,7 +210,7 @@ export function FinderPanel({
                 <p className="text-amber-200">{t.error}</p>
               ) : (
                 <>
-                  <p className="label text-blue-bright">You described</p>
+                  <p className="label text-blue-bright">{f.youDescribed}</p>
                   <p className="heading mt-3 max-w-3xl text-xl text-white sm:text-2xl">&ldquo;{t.query}&rdquo;</p>
                   <Thinking />
                 </>
@@ -218,13 +221,13 @@ export function FinderPanel({
           {!busy && last?.result && (
             <div className="border-t border-white/10 pt-8">
               <div className="mb-4 flex flex-wrap items-center gap-2">
-                <span className="label mr-1 text-gray">Follow up</span>
+                <span className="label me-1 text-gray">{f.followUp}</span>
                 {last.result.followUps.map((f) => (
                   <button
                     key={f}
                     type="button"
                     onClick={() => ask(f)}
-                    className="border border-white/15 px-3 py-2 text-left text-[0.9rem] text-white/85 transition-colors hover:border-blue-bright hover:text-white"
+                    className="border border-white/15 px-3 py-2 text-start text-[0.9rem] text-white/85 transition-colors hover:border-blue-bright hover:text-white"
                   >
                     {f}
                   </button>
@@ -240,14 +243,14 @@ export function FinderPanel({
                 }}
                 className="label mt-4 inline-flex items-center gap-2 text-gray hover:text-white"
               >
-                <Return size={14} /> New search
+                <Return size={14} /> {f.newSearch}
               </button>
             </div>
           )}
         </div>
       )}
       <p className="sr-only" aria-live="polite">
-        {last?.result ? `Results ready for: ${last.query}` : ""}
+        {last?.result ? fmt(f.resultsReady, { query: last.query }) : ""}
       </p>
     </div>
   );

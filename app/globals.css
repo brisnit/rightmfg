@@ -22,8 +22,8 @@
   --color-paper: #f6f8f9;
   --color-graphite: #11161c;
 
-  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-plex-mono), ui-monospace, "SFMono-Regular", monospace;
+  --font-sans: var(--font-archivo), var(--font-arabic), var(--font-sc), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), var(--font-arabic), var(--font-sc), ui-monospace, "SFMono-Regular", monospace;
 
   --ease-precise: cubic-bezier(0.2, 0.7, 0.1, 1);
   --breakpoint-xs: 26rem;
@@ -230,6 +230,46 @@
   .rule-draw-y {
     transform: none;
   }
+}
+
+/* ── Script-specific typography ─────────────────────────── */
+/* Arabic: tracking breaks cursive joining; taller glyphs need more leading. */
+:lang(ar) .display,
+:lang(ar) .heading,
+:lang(ar) .label {
+  letter-spacing: 0 !important;
+}
+:lang(ar) .display {
+  line-height: 1.22;
+  font-weight: 700;
+}
+:lang(ar) .heading {
+  line-height: 1.35;
+}
+:lang(ar) .label {
+  font-size: 0.8rem;
+}
+:lang(ar) body {
+  line-height: 1.75;
+}
+/* Chinese: no case, slightly more leading, no negative tracking. */
+:lang(zh-Hans) .display {
+  line-height: 1.12;
+  letter-spacing: 0;
+  font-weight: 900;
+}
+:lang(zh-Hans) .label {
+  letter-spacing: 0.04em;
+}
+/* Dutch compounds get long: allow dictionary hyphenation in display type. */
+:lang(nl) .display,
+:lang(nl) .heading {
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+/* Directional icons point the reading direction. */
+[dir="rtl"] .flip-rtl {
+  scale: -1 1;
 }
 
 /* Hide scrollbars on horizontal rails while keeping them scrollable */

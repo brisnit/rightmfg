@@ -4,9 +4,12 @@ import { useEffect, useRef, useState } from "react";
 import { OPEN_EVENT, type AskDetail } from "@/lib/finder/events";
 import { Close, Reticle } from "@/components/ui/Icons";
 import { FinderPanel } from "./FinderPanel";
+import { useI18n } from "@/components/i18n/I18nProvider";
 
 /** Site-wide Finder: opened from the header search, ⌘K, or any compact Finder input. */
 export function FinderDialog() {
+  const { dict } = useI18n();
+  const f = dict.finder;
   const ref = useRef<HTMLDialogElement>(null);
   const [session, setSession] = useState<{ key: number; query?: string } | null>(null);
 
@@ -43,17 +46,17 @@ export function FinderDialog() {
       onClick={(e) => {
         if (e.target === ref.current) close();
       }}
-      aria-label="Capability Finder"
+      aria-label={f.dialogTitle}
       className="m-0 h-dvh max-h-none w-full max-w-none bg-transparent p-0 backdrop:bg-ink/80 sm:m-auto sm:h-[min(92dvh,60rem)] sm:w-[min(94vw,76rem)]"
     >
       <div className="blueprint flex h-full flex-col bg-navy text-white sm:border sm:border-white/15">
         <div className="flex items-center justify-between border-b border-white/10 px-4 py-4 sm:px-8">
           <p className="label flex items-center gap-3 text-white">
             <Reticle size={18} className="text-blue-bright" />
-            Capability Finder
-            <span className="hidden text-gray sm:inline">/ Can Right build it?</span>
+            {f.dialogTitle}
+            <span className="hidden text-gray sm:inline">{f.dialogSub}</span>
           </p>
-          <button type="button" onClick={close} className="flex h-10 w-10 items-center justify-center text-white/70 hover:text-white" aria-label="Close Capability Finder">
+          <button type="button" onClick={close} className="flex h-10 w-10 items-center justify-center text-white/70 hover:text-white" aria-label={f.close}>
             <Close size={20} />
           </button>
         </div>

@@ -24,6 +24,7 @@ export const markets: Market[] = [
     capabilityIds: ["mandrel-tube-bending", "3d-bending", "cnc-press-brake", "tig-welding", "hardware-installation", "assembly", "powder-coating", "prototyping"],
     keywords: ["medical", "medical device", "medical equipment", "hospital", "clinical", "healthcare", "health care", "patient", "surgical", "lab", "laboratory", "imaging", "iv pole", "diagnostic"],
     image: images.brackets,
+    questions: ["Stainless medical equipment frame with welded brackets", "Medical cart with bent tube frame and powder coat", "Can you handle prototypes?"],
     customerIds: ["bd", "covidien"],
   },
   {
@@ -43,6 +44,7 @@ export const markets: Market[] = [
     capabilityIds: ["mandrel-tube-bending", "3d-bending", "cnc-press-brake", "punch-press", "mig-welding", "tig-welding", "powder-coating", "production-manufacturing"],
     keywords: ["automotive", "auto", "car", "vehicle", "truck", "trailer", "off road", "off-road", "offroad", "atv", "utv", "4x4", "overland", "roll cage", "bumper", "rack", "tonneau", "tarp"],
     image: images.mandrel,
+    questions: ["Carbon steel roof rack for off-road trucks, 500 per month", "Bent tube bumper with mounting brackets", "Can you bend square tubing?"],
     customerIds: ["amcan", "pulltarps"],
   },
   {
@@ -59,6 +61,7 @@ export const markets: Market[] = [
     capabilityIds: ["cnc-press-brake", "cnc-turret-punching", "mandrel-tube-bending", "tig-welding", "mig-welding", "powder-coating", "part-marking", "assembly"],
     keywords: ["military", "defense", "defence", "dod", "armed forces", "navy", "army", "marine", "air force", "tactical", "rugged", "mil spec", "mil-spec"],
     image: images.partDetail,
+    questions: ["Formed aluminum enclosure with laser part marking", "Welded carbon steel frame, powder coated", "Are you ITAR registered?"],
   },
   {
     id: "industrial",
@@ -77,6 +80,7 @@ export const markets: Market[] = [
     capabilityIds: ["cnc-turret-punching", "cnc-press-brake", "spot-welding", "mig-welding", "cnc-machining", "hardware-installation", "assembly", "powder-coating"],
     keywords: ["industrial", "industrial equipment", "machinery", "factory", "plant", "water", "filtration", "hvac", "process equipment", "electrical", "spa", "wellness", "safety"],
     image: images.turret,
+    questions: ["Sheet metal enclosure with hardware and powder coat", "Stainless machine guard with punched vents", "Machined aluminum extrusion"],
     customerIds: ["kinetico", "axeon", "valmark", "killion", "jmark", "euramco", "watkins"],
   },
   {
@@ -93,6 +97,7 @@ export const markets: Market[] = [
     capabilityIds: ["cnc-press-brake", "cnc-turret-punching", "mandrel-tube-bending", "mig-welding", "tig-welding", "powder-coating"],
     keywords: ["architectural", "architecture", "construction", "building", "facade", "façade", "railing", "handrail", "canopy", "signage", "contractor"],
     image: images.panels,
+    questions: ["Perforated aluminum panels, powder coated", "Bent stainless handrail", "Formed steel brackets for facade mounting"],
     customerIds: ["mbarc"],
   },
   {
@@ -109,6 +114,7 @@ export const markets: Market[] = [
     capabilityIds: ["mandrel-tube-bending", "3d-bending", "cnc-press-brake", "tig-welding", "powder-coating", "surface-prep"],
     keywords: ["decorative", "ornamental", "furniture", "gate", "fence", "sculpture", "art", "interior", "exterior", "outdoor", "indoor", "retail"],
     image: images.powderLine,
+    questions: ["Outdoor steel gate with bent tube and Cerakote", "Decorative bent tube feature, TIG welded", "What finishes can you do?"],
   },
 ];
 

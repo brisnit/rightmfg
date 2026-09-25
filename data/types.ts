@@ -106,6 +106,8 @@ export interface Market {
   keywords: string[];
   image: ImageRef;
   customerIds?: string[];
+  /** Suggested Capability Finder questions for this market's sidebar. */
+  questions: string[];
 }
 
 export interface ImageRef {

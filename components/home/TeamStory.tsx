@@ -1,9 +1,12 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
-import { company, images } from "@/data/company";
+import { getI18n } from "@/lib/i18n/server";
 
-export function TeamStory() {
+export async function TeamStory() {
+  const { dict, content } = await getI18n();
+  const d = dict.team;
+  const { company, images } = content;
   return (
     <section aria-labelledby="people-title" className="bg-paper py-20 lg:py-32">
       <div className="container-x grid gap-10 lg:grid-cols-12 lg:gap-16">
@@ -18,39 +21,39 @@ export function TeamStory() {
               style={{ objectPosition: images.brakeOperator2.position }}
             />
           </div>
-          <div className="absolute -bottom-2 right-4 hidden w-[34%] border-8 border-paper sm:block lg:-right-8">
+          <div className="absolute -bottom-2 end-4 hidden w-[34%] border-8 border-paper sm:block lg:-end-8">
             <div className="relative aspect-square overflow-hidden bg-ink">
               <Image src={images.surfacePrep.src} alt={images.surfacePrep.alt} fill sizes="25vw" className="object-cover" style={{ objectPosition: images.surfacePrep.position }} />
             </div>
           </div>
-          <p className="label mt-4 text-[0.66rem] text-steel">Fig. 01 — Forming on the press brake, San Diego</p>
+          <p className="label mt-4 text-[0.66rem] text-steel">{d.figure}</p>
         </Reveal>
 
         <div className="lg:col-span-5 lg:pt-6">
           <Reveal plain className="flex items-center gap-4">
             <span className="label tabular text-blue">06</span>
-            <span className="label text-steel">People</span>
+            <span className="label text-steel">{d.label}</span>
             <span className="rule-draw h-px flex-1 bg-navy/15" aria-hidden />
           </Reveal>
           <Reveal>
             <h2 id="people-title" className="display mt-8 text-[clamp(2.1rem,4.6vw,4rem)] text-navy">
-              Built by people who know the process.
+              {d.title}
             </h2>
             <p className="mt-6 text-[1.05rem] leading-relaxed text-steel">
-              Right was founded in the 1990s with a service-first mission. Today it&apos;s a 35-person San Diego company whose team averages more than 20 years of experience. The engineers who review your drawings have spent 30+ years helping customers with product design, fabrication and assembly.
+              {d.p1}
             </p>
             <p className="mt-4 text-[1.05rem] leading-relaxed text-steel">
-              Programming a press brake means choosing bend order, pressure, dwell and part position. That judgment comes from the operators, and it&apos;s why 98% of clients stay.
+              {d.p2}
             </p>
           </Reveal>
 
           <Reveal delay={100} className="mt-10 grid grid-cols-3 border-y border-navy/12">
             {[
-              ["35", "Person team"],
-              ["20+", "Yrs avg. experience"],
-              ["30+", "Yrs engineering"],
+              ["35", d.stat1],
+              ["20+", d.stat2],
+              ["30+", d.stat3],
             ].map(([v, l], i) => (
-              <div key={l} className={`py-5 ${i ? "border-l border-navy/12 pl-4" : ""}`}>
+              <div key={l} className={`py-5 ${i ? "border-s border-navy/12 ps-4" : ""}`}>
                 <p className="display text-[2.4rem] text-navy">{v}</p>
                 <p className="label mt-2 text-[0.66rem] text-steel">{l}</p>
               </div>
@@ -58,17 +61,17 @@ export function TeamStory() {
           </Reveal>
 
           <Reveal delay={160} className="mt-8">
-            <p className="label text-steel">Leadership</p>
+            <p className="label text-steel">{d.leadership}</p>
             <ul className="mt-3">
               {company.leadership.map((p) => (
                 <li key={p.name} className="flex items-baseline justify-between gap-4 border-b border-navy/10 py-3">
                   <span className="heading text-lg text-navy">{p.name}</span>
-                  <span className="label text-right text-[0.68rem] text-steel">{p.role}</span>
+                  <span className="label text-end text-[0.68rem] text-steel">{p.role}</span>
                 </li>
               ))}
             </ul>
             <Button href="/about" variant="text-dark" className="mt-8">
-              About Right Manufacturing
+              {d.aboutLink}
             </Button>
           </Reveal>
         </div>

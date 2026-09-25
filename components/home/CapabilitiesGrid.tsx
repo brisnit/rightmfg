@@ -1,27 +1,30 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/ui/LocaleLink";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { ArrowUpRight } from "@/components/ui/Icons";
-import { capabilityTiles } from "@/data/home";
+import { getI18n } from "@/lib/i18n/server";
 
-export function CapabilitiesGrid() {
+export async function CapabilitiesGrid() {
+  const { dict, content } = await getI18n();
+  const d = dict.capsSection;
+  const capabilityTiles = content.capabilityTiles;
   return (
     <section aria-labelledby="caps-title" className="bg-paper pb-20 pt-6 lg:pb-32">
       <div className="container-x">
         <SectionHeader
           index="02"
-          label="Capabilities"
+          label={d.label}
           id="caps-title"
           title={
             <>
-              One partner.
+              {d.title1}
               <br />
-              <span className="text-blue">More ways to build.</span>
+              <span className="text-blue">{d.title2}</span>
             </>
           }
-          intro="From bent tube and sheet metal to welded, hardware-fitted assemblies, OEM teams can take complex components from prototype into repeatable production with one supplier."
+          intro={d.intro}
         />
 
         <ul className="mt-12 grid grid-cols-2 gap-px bg-navy/10 lg:mt-16 lg:grid-cols-4">
@@ -49,7 +52,7 @@ export function CapabilitiesGrid() {
                     <span className="overflow-hidden">
                       <span className="mt-4 block border-t border-white/20 pt-3">
                         {t.subs.map((s) => (
-                          <span key={s} className="block py-0.5 text-[0.9rem] text-white/85">
+                          <span key={s} className="block py-0.5 text-[0.9rem] text-white/85 hyphens-auto [overflow-wrap:anywhere]">
                             {s}
                           </span>
                         ))}
@@ -64,10 +67,10 @@ export function CapabilitiesGrid() {
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-xl text-steel">
-            Know exactly what you need? Filter by process, material, market and production stage in the explorer.
+            {d.explorerNote}
           </p>
           <Button href="/capabilities#explorer" variant="ghost-dark">
-            Open capability explorer
+            {d.openExplorer}
           </Button>
         </div>
       </div>
