@@ -68,7 +68,7 @@ export function Header() {
       onMouseLeave={scheduleClose}
     >
       <div className="container-x flex h-[4.5rem] items-center justify-between gap-6 lg:h-20">
-        <Logo />
+        <Logo preload />
 
         <nav aria-label="Primary" className="hidden lg:block">
           <ul className="flex items-center">

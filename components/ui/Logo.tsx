@@ -1,26 +1,23 @@
+import Image from "next/image";
 import Link from "next/link";
 
 /**
- * Typographic rebuild of the existing RIGHT MANUFACTURING wordmark
- * (wide, heavy "RIGHT" over tracked "MANUFACTURING"), so it scales crisply
- * and works on dark and light grounds.
+ * Right Manufacturing wordmark (official artwork, trimmed copies of
+ * rmfgwhite.png / rmfgBlue.png). White for dark grounds, navy for light.
  */
-export function Logo({ tone = "light", className = "" }: { tone?: "light" | "dark"; className?: string }) {
-  const color = tone === "light" ? "text-white" : "text-navy";
+export function Logo({ tone = "light", className = "", preload = false }: { tone?: "light" | "dark"; className?: string; preload?: boolean }) {
+  const light = tone === "light";
   return (
-    <Link href="/" aria-label="Right Manufacturing home" className={`group inline-flex flex-col leading-none ${color} ${className}`}>
-      <span
-        className="block text-[1.55rem] font-[900] tracking-[0.02em]"
-        style={{ fontStretch: "125%", fontVariationSettings: '"wdth" 125', lineHeight: 0.82 }}
-      >
-        RIGHT
-      </span>
-      <span
-        className="mt-[3px] block text-[0.56rem] font-medium tracking-[0.305em]"
-        style={{ fontStretch: "125%", fontVariationSettings: '"wdth" 125' }}
-      >
-        MANUFACTURING
-      </span>
+    <Link href="/" aria-label="Right Manufacturing home" className={`inline-flex shrink-0 ${className}`}>
+      <Image
+        src={light ? "/images/logo-white.png" : "/images/logo-navy.png"}
+        alt="Right Manufacturing"
+        width={800}
+        height={light ? 145 : 142}
+        sizes="160px"
+        preload={preload}
+        className="h-auto w-[132px] lg:w-[152px]"
+      />
     </Link>
   );
 }
